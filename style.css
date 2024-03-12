@@ -1,0 +1,12 @@
+.logoimg{
+    width: 15%;
+    height: auto;
+}
+footer .gotop {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    z-index: 100;
+    width: 5%;
+    height: auto;
+}
