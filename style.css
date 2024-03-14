@@ -1,0 +1,19 @@
+/* Xu ly Topbar */
+.Topbar-Left-List{
+    margin: 0px;
+    padding: 0px;
+}
+.Topbar-Left-List li{
+    list-style-type: none;
+    float: left;
+    border-right: 1px solid;
+}
+.Topbar-Left-List li a{
+    text-decoration: none;
+    padding: 5px;
+    color: lightgray;
+}
+.Topbar-Left-List li:last-child{
+    border-right: none;
+}
+/* Ket thuc xu ly Topbar */
