@@ -1,19 +1,28 @@
 /* Xu ly Topbar */
-.Topbar-Left-List{
+/* xu ly left */
+#Topbar-Left .Topbar-Left-List{
     margin: 0px;
     padding: 0px;
 }
-.Topbar-Left-List li{
+#Topbar-Left .Topbar-Left-List li{
     list-style-type: none;
     float: left;
     border-right: 1px solid;
 }
-.Topbar-Left-List li a{
+#Topbar-Left .Topbar-Left-List li a{
     text-decoration: none;
     padding: 5px;
     color: lightgray;
 }
-.Topbar-Left-List li:last-child{
+#Topbar-Left .Topbar-Left-List li:last-child{
     border-right: none;
+}
+/* xu ly mid */
+#Topbar-Middle {
+
+}
+/* xu ly right */
+#Topbar-Right .Topbar-Right-List{
+    
 }
 /* Ket thuc xu ly Topbar */
