@@ -1,0 +1,98 @@
+body {
+  font: 1.2em Arial, sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header-cell"
+    "nav-cell"
+    "main-cell"
+    "footer-cell";
+  max-width: 100%;
+
+  /* Làm đầy trang */
+  margin: 0 auto;
+}
+
+main,
+header,
+footer {
+  border: 1px solid pink;
+  border-radius: 1%;
+  background-color: rgb(185, 185, 120);
+}
+
+header {
+  grid-area: header-cell;
+  height: 100%;
+  padding: 0 0.7%;
+  background-color: pink;
+}
+
+nav {
+  grid-area: nav-cell;
+  margin-top: 2%;
+}
+
+.search-container {
+  float: right;
+  margin-right: 10%;
+}
+
+.search-input {
+  font-size: 120%;
+  margin-right: 10px;
+}
+
+.icon-white {
+  font-size: 140%;
+  cursor: pointer;
+}
+
+.icon-white:hover {
+  color: red;
+  font-size: 160%;
+}
+
+nav a {
+  float: left;
+  border: 5px solid pink;
+  font-weight: bold;
+  color: black;
+  padding: 2px 4px;
+}
+
+nav a:hover {
+  color: pink;
+}
+
+main {
+  grid-area: main-cell;
+}
+
+footer .gotop {
+  right: 10px;
+  margin-top: -10%;
+  z-index: 100;
+  position: fixed;
+  padding: 10px;
+  bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  grid-area: footer-cell;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 2%;
+}
+
+.footer_end a {
+  border: 5px solid rgb(185, 185, 120);
+  color: black;
+}
+
+.footer_end .social-icon {
+  color: blue;
+}
