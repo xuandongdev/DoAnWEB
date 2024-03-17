@@ -15,16 +15,36 @@ body {
 main,
 header,
 footer {
-  border: 1px solid pink;
+  border: 1px solid red;
   border-radius: 1%;
   background-color: rgb(185, 185, 120);
 }
 
 header {
+  /* banner & logo */
+  position: relative;
+  height: 100px;
+  /* logo & banner done */
   grid-area: header-cell;
   height: 100%;
   padding: 0 0.7%;
-  background-color: pink;
+  background-color: red;
+}
+
+.logo-link {
+  position: absolute; /* Set position to absolute for the logo link */
+  top: 0; /* Position from the top of the header */
+  left: 0; /* Position from the left of the header */
+}
+
+.logo {
+  height: 100px; /* Adjust height as needed */
+  z-index: 1; /* Set z-index to make sure the logo appears above the banner */
+}
+
+.banner-image {
+  height: 100px; /* Adjust height as needed */
+  width: 100%;
 }
 
 nav {
@@ -54,14 +74,15 @@ nav {
 
 nav a {
   float: left;
-  border: 5px solid pink;
   font-weight: bold;
   color: black;
-  padding: 2px 4px;
+  padding: 0.5%;
 }
-
+nav a:last-child{
+  border-right: none;
+}
 nav a:hover {
-  color: pink;
+  color: lightcyan;
 }
 
 main {
