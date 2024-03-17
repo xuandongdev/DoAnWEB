@@ -23,10 +23,8 @@ footer {
 header {
   /* banner & logo */
   position: relative;
-  height: 100px;
   /* logo & banner done */
   grid-area: header-cell;
-  height: 100%;
   padding: 0 0.7%;
   background-color: red;
 }
@@ -38,7 +36,8 @@ header {
 }
 
 .logo {
-  height: 100px; /* Adjust height as needed */
+  max-width: 30%;
+  height: auto;
   z-index: 1; /* Set z-index to make sure the logo appears above the banner */
 }
 
@@ -68,21 +67,18 @@ nav {
 }
 
 .icon-white:hover {
-  color: red;
+  color: lightcyan;
   font-size: 160%;
 }
 
 nav a {
   float: left;
   font-weight: bold;
-  color: black;
+  color: lightcyan;
   padding: 0.5%;
 }
-nav a:last-child{
-  border-right: none;
-}
 nav a:hover {
-  color: lightcyan;
+  color: black;
 }
 
 main {
