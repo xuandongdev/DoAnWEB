@@ -17,7 +17,7 @@ header,
 footer {
   border: 1px solid red;
   border-radius: 1%;
-  background-color: rgb(185, 185, 120);
+  background-color: white;
 }
 
 header {
@@ -106,10 +106,13 @@ footer {
 }
 
 .footer_end a {
-  border: 5px solid rgb(185, 185, 120);
+  border: 5px solid white;
   color: black;
 }
 
 .footer_end .social-icon {
   color: blue;
+}
+footer .gotop{
+  size: 5%;
 }
