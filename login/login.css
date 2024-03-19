@@ -1,0 +1,136 @@
+/* wildcard style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: #fe1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page{
+    width: 95%;
+    height: 90%;
+    background: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+}
+#page .logo{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    animation: ani1 1s infinite linear;    
+}
+/* heartbeat animation */
+@keyframes ani1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+#page .logo .icon{
+    transition: all 0.1s;
+    width: 25%;
+    color: aqua;
+    animation: ani2 5s infinite linear;
+}
+@keyframes ani2{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(720deg);
+    }
+}
+/* content */
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* left */
+.left{
+    width: 50%;
+    padding-top: 220px;
+    padding-left: 150px;
+}
+.left .title{
+    height: 100px;
+}
+.left .title h1{
+    color: #fff;
+    font-size: 95px;
+    letter-spacing: 10px;
+}
+.left p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+    padding: 1px;
+}
+.left button{
+    width: 195px;
+    height: 42px;
+    border: 1px solid #27f2ff;
+    background: transparent;
+    color: #fff;
+    margin-top: 100px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* right */
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 70%;
+    height: 60%;
+    border: 1px solid aqua;
+    box-shadow: 0px 0px 10px aqua;
+}
+form h1{
+    margin-top: 76px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 67px;
+}
+form input{
+    display: block;
+    width: 350px;
+    height: 50px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background: #111d2e;
+    color: #fff;
+}
+form input[type = 'submit']{
+    width: 212px;
+    height: 53px;
+    color: #fff;
+    border: 1px solid #27f2ff;
+    margin-top: 75px;
+    padding: 0px;
+}
