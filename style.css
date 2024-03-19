@@ -36,7 +36,7 @@ header {
 }
 
 .logo {
-  max-width: 30%;
+  max-width: 27%;
   height: auto;
   z-index: 1; /* Set z-index to make sure the logo appears above the banner */
 }

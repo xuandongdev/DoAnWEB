@@ -126,9 +126,23 @@ form input{
     background: #111d2e;
     color: #fff;
 }
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
 form input[type = 'submit']{
     width: 212px;
     height: 53px;
+    color: #fff;
+    border: 1px solid #27f2ff;
+    margin-top: 75px;
+    padding: 0px;
+    margin-right: 5px;
+}
+form button{
+     width: 212px;
+    height: 53px;
+    background: #111d2e;
     color: #fff;
     border: 1px solid #27f2ff;
     margin-top: 75px;
