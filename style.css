@@ -52,7 +52,7 @@ nav {
   z-index: 2;
   background-color: transparent;
 }
-.input-container{
+.input-container {
   position: relative;
   width: 110%;
 }
@@ -73,12 +73,13 @@ nav {
 }
 #icon-white:hover {
   color: black;
-  font-size: 120%;
+  font-size: 150%;
 }
 a {
   text-decoration: none;
 }
-nav a {font-size: 100%;
+nav a {
+  font-size: 100%;
   float: left;
   font-weight: bold;
   color: lightcyan;
@@ -94,38 +95,38 @@ main {
 }
 
 /* Slider */
-li{
+li {
   list-style: none;
 }
-.slider{
+.slider {
   padding: 1% 0;
   height: 1%;
 }
-.slide-content{
+.slide-content {
   display: flex;
   justify-content: space-between;
 }
-.slide-content-left{
+.slide-content-left {
   width: 65%;
 }
-.slide-content-left-top{
+.slide-content-left-top {
   width: 90%;
   height: 90%;
 }
-.slide-content-left-top img{
+.slide-content-left-top img {
   width: 110%;
   height: 90%;
   object-fit: cover;
   position: relative;
 }
-.slide-content-left-bottom{
+.slide-content-left-bottom {
   display: flex;
   justify-content: space-between;
   border: 2px solid red;
   height: 20%;
   border-top: none;
 }
-.slide-content-left-bottom li{
+.slide-content-left-bottom li {
   font-size: 80%;
   width: 20%;
   text-align: center;
@@ -133,7 +134,7 @@ li{
   padding: 0 1%;
   position: relative;
 }
-.slide-content-left-bottom li:before{
+.slide-content-left-bottom li:before {
   display: block;
   content: "";
   position: absolute;
@@ -142,19 +143,18 @@ li{
   background-color: #ddd;
   right: 0;
 }
-.slide-content-left-bottom li:hover{
+.slide-content-left-bottom li:hover {
   border-top: 3px solid red;
 }
 
-
-.slide-content-right{
+.slide-content-right {
   width: 35%;
   display: flex;
   flex-wrap: wrap;
   padding: 0 1px;
   justify-content: space-around;
 }
-ul .slide-content-right{
+ul .slide-content-right {
   list-style: none;
   width: 100%;
   height: 100%;
@@ -162,7 +162,6 @@ ul .slide-content-right{
   margin-bottom: 3px;
 }
 /* End Slider */
-
 
 footer {
   grid-area: footer-cell;
@@ -180,11 +179,11 @@ footer {
   color: red;
 }
 
-footer .gotop i{
+footer .gotop i {
   right: 1%;
-  margin-top: -10%;
-  z-index: 1;
+  z-index: 100;
   position: fixed;
-  padding: 1%;
   bottom: 1%;
+  font-size: 500%;
+  color: black;
 }
