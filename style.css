@@ -100,14 +100,6 @@ main {
   grid-area: main-cell;
 }
 
-footer .gotop {
-  right: 10px;
-  margin-top: -10%;
-  z-index: 100;
-  position: fixed;
-  padding: 10px;
-  bottom: 5px;
-}
 
 a {
   text-decoration: none;
@@ -128,12 +120,70 @@ footer {
 .footer_end .social-icon {
   color: red;
 }
+
 footer .gotop{
-  position: absolute;
-  width: 10%;
+  right: 1%;
+  margin-top: -10%;
+  z-index: 1;
+  position: fixed;
+  padding: 1%;
+  bottom: 1%;
+  width: 5%;
   margin: 0 auto;
+  border: 1px solid red;
 }
 footer .gotop img{
-  width: 30%;
+  width: 50%;
   border-radius: 20%;
+}
+
+/* Slider */
+li{
+  list-style: none;
+}
+.slider{
+  padding: 1% 0;
+  height: 1%;
+}
+.slide-content{
+  display: flex;
+  justify-content: space-between;
+}
+.slide-content-left{
+  width: 65%;
+}
+.slide-content-left-top{
+  width: 100%;
+  transform: translateX(1%);
+}
+.slide-content-left-top img{
+  width: 100%;
+  object-fit: cover;
+}
+.slide-content-left-bottom{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  border-top: none;
+}
+.slide-content-left-bottom li{
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+  padding: 1% 0;
+  position: relative;
+}
+.slide-content-left-bottom li::before{
+  display: block;
+  content: none;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  right: 0;
+}
+.slide-content-left-bottom li .avtive{
+  border-top: 1% solid red;
+}
+.slide-content-right{
+  width: 35%;
 }
