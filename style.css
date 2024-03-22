@@ -109,13 +109,14 @@ li{
   width: 65%;
 }
 .slide-content-left-top{
-  width: 100%;
+  width: 90%;
   height: 90%;
 }
 .slide-content-left-top img{
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 90%;
   object-fit: cover;
+  position: relative;
 }
 .slide-content-left-bottom{
   display: flex;
@@ -144,20 +145,21 @@ li{
 .slide-content-left-bottom li:hover{
   border-top: 3px solid red;
 }
+
+
 .slide-content-right{
   width: 35%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1%;
+  padding: 0 1px;
   justify-content: space-around;
 }
-.slide-content-right li{
-  width: 50%;
-  height: 50%;
+ul .slide-content-right{
+  list-style: none;
+  width: 100%;
+  height: 100%;
   text-align: center;
-}
-.slide-content-right li img{
-  width: 50%;
+  margin-bottom: 3px;
 }
 /* End Slider */
 
@@ -178,7 +180,7 @@ footer {
   color: red;
 }
 
-footer .gotop{
+footer .gotop i{
   right: 1%;
   margin-top: -10%;
   z-index: 1;
