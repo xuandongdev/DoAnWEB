@@ -151,6 +151,8 @@ li {
 }
 .slide-content-bottom li:hover {
   border-top: 3px solid red;
+  background-color: red;
+  color: white;
 }
 /* Button slide */
 .slide-content-top-button{
