@@ -101,70 +101,91 @@ li {
   list-style: none;
 }
 .slider {
-  padding: 1% 0;
+  padding: 20px 0;
   height: 1%;
 }
 .slide-content {
+  display: flex;
   justify-content: space-between;
 }
-.slide-content-top {
-  width: 90%;
+/* LEFT */
+.slide-content-left{
+  width: 65%;
+  padding: 0 30px;
+  position: relative;
+}
+
+.slide-content-left-top {
+  width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 /* hover slide */
 .slide-content-top:hover i{
   opacity: 1;
 }
-.slide-content-top img {
+.slide-content-left-top img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  position: relative;
+  object-fit: cover;
 }
-.slide-content-bottom {
+.slide-content-left-bottom {
   display: flex;
   justify-content: space-between;
   border: 2px solid red;
   border-top: none;
-  width: 99,99%;
-  height: 100%;
+  height: 50px;
 }
-.slide-content-bottom li {
+.slide-content-left-bottom li {
   font-size: 90%;
   width: 50%;
-  height: 30px;
+  height: 100%;
   text-align: center;
   cursor: pointer;
   padding: 0 1%;
   position: relative;
   border-left: 2px solid red;
 }
-.slide-content-bottom li::after {
+.slide-content-left-bottom li::before {
   display: block;
   content: "";
   position: absolute;
-  width: 0;
-  height: 100%;
-  background-color:;
+  width: 1px;
+  height: 70%;
+  background-color: black;
   right: 0;
 }
-.slide-content-bottom li:hover {
+.slide-content-left-bottom li.active{
   border-top: 3px solid red;
   background-color: red;
   color: white;
 }
+/* RIGHT */
+.slide-content-right{
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+.slide-content-right li{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+.slide-content-right li img{
+  height: 90%;
+  width: 90%;
+}
 /* Button slide */
-.slide-content-top-button{
+.slide-content-left-top-button{
   position: absolute;
   top: 50%;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  z-index: 100;
 }
-.slide-content-top-button i{
-  color: red;
-  font-size: 200%;
+.slide-content-left-top-button i{
+  color: red; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,6 +194,7 @@ li {
   transition: all 0.3s ease;
 }
 /* End Slider */
+
 
 footer {
   grid-area: footer-cell;
