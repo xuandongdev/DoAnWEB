@@ -54,21 +54,23 @@ nav {
 }
 .input-container {
   position: relative;
-  width: 110%;
+  width: 100%;
 }
 .search-input {
   font-size: 100%;
-  width: 85%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   padding: 1% 3% 3% 1%;
   border-radius: 1%;
   border: none;
+  padding-right: 10%;
 }
 #icon-white {
   position: absolute;
+  top: 50%;
+  left: 95%;
   font-size: 120%;
-  /* cursor: pointer; */
-  color: aliceblue;
+  color: red;
   line-height: 1%;
 }
 #icon-white:hover {
@@ -103,63 +105,70 @@ li {
   height: 1%;
 }
 .slide-content {
-  display: flex;
   justify-content: space-between;
 }
-.slide-content-left {
-  width: 65%;
-}
-.slide-content-left-top {
+.slide-content-top {
   width: 90%;
-  height: 90%;
+  height: 100%;
+  object-fit: contain;
 }
-.slide-content-left-top img {
-  width: 110%;
-  height: 90%;
-  object-fit: cover;
+/* hover slide */
+.slide-content-top:hover i{
+  opacity: 1;
+}
+.slide-content-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   position: relative;
 }
-.slide-content-left-bottom {
+.slide-content-bottom {
   display: flex;
   justify-content: space-between;
   border: 2px solid red;
-  height: 20%;
   border-top: none;
+  width: 99,99%;
+  height: 100%;
 }
-.slide-content-left-bottom li {
-  font-size: 80%;
-  width: 20%;
+.slide-content-bottom li {
+  font-size: 90%;
+  width: 50%;
+  height: 30px;
   text-align: center;
   cursor: pointer;
   padding: 0 1%;
   position: relative;
+  border-left: 2px solid red;
 }
-.slide-content-left-bottom li:before {
+.slide-content-bottom li::after {
   display: block;
   content: "";
   position: absolute;
-  width: 1px;
-  height: 70%;
-  background-color: #ddd;
+  width: 0;
+  height: 100%;
+  background-color:;
   right: 0;
 }
-.slide-content-left-bottom li:hover {
+.slide-content-bottom li:hover {
   border-top: 3px solid red;
 }
-
-.slide-content-right {
-  width: 35%;
+/* Button slide */
+.slide-content-top-button{
+  position: absolute;
+  top: 50%;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 1px;
-  justify-content: space-around;
-}
-ul .slide-content-right {
-  list-style: none;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  text-align: center;
-  margin-bottom: 3px;
+}
+.slide-content-top-button i{
+  color: red;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 /* End Slider */
 
@@ -184,6 +193,6 @@ footer .gotop i {
   z-index: 100;
   position: fixed;
   bottom: 1%;
-  font-size: 500%;
-  color: black;
+  font-size: 250%;
+  color: red;
 }
