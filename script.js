@@ -1,37 +1,38 @@
+let slideIndex = 1;
+showSlides(slideIndex);
 
-  var slideIndex = 0;
-  showSlides();
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    var slideTexts = document.querySelectorAll('.slide-content-left-bottom li');
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    updateActiveText(slideIndex - 1, slideTexts);
-    setTimeout(showSlides, 1000); // Change image every 2 seconds
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  slides[slideIndex-1].style.display = "block";
+}
+// auto slide
+let slideIndexAuto = 0;
+showSlidesAuto();
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+function showSlidesAuto() {
+  let i;
+  let slidesAuto = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slidesAuto.length; i++) {
+    slidesAuto[i].style.display = "none";
   }
-
-  function updateActiveText(index, texts) {
-    for (var i = 0; i < texts.length; i++) {
-      if (i === index) {
-        texts[i].classList.add('active');
-      } else {
-        texts[i].classList.remove('active');
-      }
-    }
-  }
+  slideIndexAuto++;
+  if (slideIndexAuto > slidesAuto.length) {slideIndexAuto = 1}
+  slidesAuto[slideIndexAuto-1].style.display = "block";
+  setTimeout(showSlidesAuto, 2000); // Change image every 2 seconds
+}
