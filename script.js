@@ -1,16 +1,15 @@
+// START SLIDE
+    //-------CLICK SLIDE-------
 let slideIndex = 1;
 showSlides(slideIndex);
-
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -21,10 +20,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
-// auto slide
+    //-------AUTO SLIDE-------
 let slideIndexAuto = 0;
 showSlidesAuto();
-
 function showSlidesAuto() {
   let i;
   let slidesAuto = document.getElementsByClassName("mySlides");
@@ -34,5 +32,17 @@ function showSlidesAuto() {
   slideIndexAuto++;
   if (slideIndexAuto > slidesAuto.length) {slideIndexAuto = 1}
   slidesAuto[slideIndexAuto-1].style.display = "block";
-  setTimeout(showSlidesAuto, 2000); // Change image every 2 seconds
+  setTimeout(showSlidesAuto, 3000); // Change image every 2 seconds
 }
+    //-------DUNG AUTO SLIDE KHI CLICK-------
+function stopAutoSlide() {
+    clearTimeout(autoSlideTimeout);
+}
+    //-------LI THAY DOI THEO SLIDE-------
+const numberLi = document.querySelectorAll('.slide-content-left-bottom li')
+numberLi.forEach(function(image, index){
+    image.addEventListener("click", function(){
+        document.querySelector(".slide-content-left-top").style.right = index 
+    })
+})
+// END SLIDE
