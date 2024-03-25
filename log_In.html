@@ -1,46 +1,145 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập - TrungDongMobile</title>
-  <link rel="stylesheet" href="login.css">
-  <script src="login.js"></script>
-  <link rel="shortcut icon" href="/img/Header-Footer/iconFinal.png" type="image/x-icon">
-</head>
-<body>
-  <div id="page">
-    <div class="logo">
-      <img class="icon" src="/img/Header-Footer/logo-nonLetter.png" alt="LOGO">
-    </div>
-    <div class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ - TrungDongMobile</title>
+    <link
+      rel="shortcut icon"
+      href="./img/Header-Footer/iconFinal.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="log_In.css" />
+  </head>
 
-      <!-- left -->
-      <div class="left">
-        <div class="title">
-          <h1>Welcome!</h1>
-        </div>
-        <p>Chào mừng quý khách hàng đến với cửa hàng <i><b>Trung Dong Mobile!</b></i></p>
-        <button id="exploreBtn">Khám phá ngay</button>
-      </div>
-
-      <!-- right -->
-      <div class="right">
-        <form onsubmit="return loginValidate(this);" action="#" method="post">
-          <h1>LOGIN</h1>
-          <div class="inputContainer">
-            <input class="inputField" type="text" placeholder="UserName" name="email">
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- logo banner -->
+      <a href="./index.html" class="logo-link">
+        <img
+          class="logo"
+          src="./img/Header-Footer/logoFinal.png"
+          height="100px"
+        />
+      </a>
+      <div class="search-container">
+        <form action="#" method="get">
+          <div class="input-container">
+            <input
+              id="search"
+              class="search-input"
+              type="text"
+              placeholder="Nhập nội dung cần tìm... "
+              name="search"
+            /><i id="icon-white" class="bx bx-search"></i>
           </div>
-          <div class="inputContainer">
-            <input class="inputField" type="password" placeholder="Password" name="pwd">
-          </div>
-          <input type="submit" value="LOGIN">
         </form>
-        
       </div>
-    </div>
-  </div>
-  <!-- js -->
-  <script src="login.js"></script>
-</body>
+      <a href="product.html">
+        <img
+          class="banner-image"
+          src="./img/Header-Footer/flashSale.gif"
+          alt="Error"
+        />
+      </a>
+      <!-- MENU NAV -->
+      <nav>
+        <a href="./index.html"><i class="bx bx-home-alt-2"></i> Trang Chủ</a>
+        <a href="./news.html"><i class="bx bx-news"></i> Tin Tức</a>
+        <a href="./help.html"><i class="bx bx-help-circle"></i> Hỗ Trợ</a>
+        <a href="./product.html"
+          ><i class="bx bxl-product-hunt"></i> Sản Phẩm</a
+        >
+        <a href="./cart.html"><i class="bx bx-cart"></i> Giỏ Hàng</a>
+        <a href="./payment.html"><i class="bx bx-dollar"></i> Thanh Toán</a>
+        <a href="./log_In.html"><i class="bx bx-user-circle"></i> Đăng Nhập</a>
+        <a href="./sign_Up.html"><i class="bx bxs-user-circle"></i> Đăng Ký</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="logIn">
+        <div class="line_69">
+          <div id="page">
+            <div class="logo">
+              <img
+                height="200px"
+                class="bxl-html5"
+                src="img/Header-Footer/iconFinal.png"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <div class="left">
+                <div class="title">
+                  <h1></h1>
+                </div>
+                <p>
+                  Cảm ơn bạn đã ghé đến trang web. Chúng tôi có rất nhiều chương
+                  trình khuyến mãi dành riêng cho bạn.
+                </p>
+                <button>Explore</button>
+              </div>
+              <div class="right">
+                <form class="form_login" action="">
+                  <h1>Đăng Nhập</h1>
+                  <input
+                    type="text"
+                    placeholder="Nhập tài khoản"
+                    id="username"
+                  />
+                  <input
+                    type="password"
+                    placeholder="Nhập mật khẩu"
+                    id="password"
+                  />
+                  <input type="submit" value="ĐĂNG NHẬP" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_end">
+        <a href="./about_Us.html">Về Chúng tôi</a>
+        <a href="./policy.html">Chính Sách</a>
+        <a href="./contact.html">Liên Hệ</a>
+        <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+          <i class="bx bxl-meta"></i>
+        </a>
+        <a href="https://www.twitter.com/" class="social-icon" target="_blank">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="https://github.com/" class="social-icon" target="_blank">
+          <i class="bx bxl-github"></i>
+        </a>
+      </div>
+      <p>Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+      <p style="font-size: 5px">
+        Bản quyền hình ảnh thuộc về <i>thegiodidong.com</i>
+      </p>
+      <a href="#search" class="gotop">
+        <i class="bx bx-chevron-up"></i>
+      </a>
+    </footer>
+    <script src="log_In.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
