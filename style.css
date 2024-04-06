@@ -240,6 +240,10 @@ li {
   width: 100%;
   height: 100%;
 }
+.banner-product2 img{
+  margin-top: 1%;
+  width: 100%;
+}
 /* product item */
 /* CSS */
 section .product{
@@ -277,7 +281,7 @@ section .product{
   margin: 10px auto 0 auto;
 }
 .lts-product .product-item .item-img img{
-  width: 60%;
+  width: 70%;
   height: 40%;
   transition: transform 0.3s ease-in-out;
 }
