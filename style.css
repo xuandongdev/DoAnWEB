@@ -356,11 +356,14 @@ strong{
   }
 }
 
+.under{
+  height: 5%;
+}
 footer {
   grid-area: footer-cell;
   text-align: center;
   font-weight: bold;
-  padding-top: 2%;
+  padding-top: 1%;
 }
 
 .footer_end a {
