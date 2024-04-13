@@ -1,7 +1,7 @@
-const title = document.querySelector(".title h1");
+const title = document.querySelector(".title1 h1");
 
-const letter = "Welcome !";
-
+const letter = "elcome !";
+title.textContent = "W";
 var index = 0;
 
 setInterval(() => {
@@ -9,6 +9,6 @@ setInterval(() => {
   index++;
   if (index == letter.length + 1) {
     index = 0;
-    title.textContent = "";
+    title.textContent = "W";
   }
 }, 500);

@@ -8,7 +8,7 @@
 }
 
 .line_69 {
-  height: 100vh;
+  height: 95vh;
   background: #a10000;
   display: flex;
   justify-content: center;
@@ -16,8 +16,8 @@
 }
 
 #page {
-  width: 1440px;
-  height: 700px;
+  height: 600px;
+  width: 100%;
   background: white;
   position: relative;
   justify-content: center;
@@ -27,18 +27,7 @@
 
 #page .logo {
   position: absolute;
-  top: 62px;
-  left: 66px;
-  animation: ani1 4s infinite linear;
-}
-
-@keyframes ani1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate((360deg));
-  }
+  left: 10px;
 }
 
 #page .logo .bxl-html5 {
@@ -59,24 +48,22 @@
 
 .content {
   width: 100%;
-  height: 100%;
   display: flex;
 }
 
 .left {
   width: 50%;
   padding-top: 220px;
-  padding-left: 150px;
+  padding-left: 30px;
+  --width: 50%;
 }
 
-.left .title {
-  height: 100px;
-}
-
-.left .title h1 {
+.left .title1 h1 {
   color: rgb(18, 10, 10);
-  font-size: 95px;
+  font-size: 50px;
   letter-spacing: 10px;
+  text-align: left;
+  margin-left: 40px;
 }
 
 .left p {
@@ -96,6 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(50%);
 }
 
 .right {
@@ -107,13 +95,13 @@
 }
 
 .right form {
-  width: 492px;
-  height: 596px;
+  border-radius: 5px 0;
+  height: 600px;
   border: 1px solid rgb(201, 112, 112);
   box-shadow: 0 0 10px rgb(201, 112, 112);
 }
 
-form h1 {
+.right form h1 {
   margin-top: 76px;
   color: black;
   text-align: center;
@@ -135,6 +123,54 @@ form h1 {
   display: flex;
 }
 
-.signUp {
+header .con-nav {
+  background-image: url(./img/Header-Footer/flashSale.gif);
+  background-size: cover;
+}
+
+.nav-item {
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.signUp_1 {
   text-align: center;
+}
+
+.navbar-toggler {
+  margin: 10px;
+  border: 2px solid black;
+  background-color: rgb(236, 46, 46);
+}
+
+.col-3 .input-container {
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  transform: translateY(40%);
+  width: 270px;
+}
+
+.bx-search {
+  margin-left: -5%;
+}
+
+.logIn {
+  text-align: center;
+}
+
+/*Phần LogIn  */
+.right-login {
+  width: 50%;
+  border: 2px solid rgb(201, 112, 112);
+}
+
+.form-login {
+  margin-top: 200px;
+}
+
+.form-login input {
+  width: 90%;
 }
