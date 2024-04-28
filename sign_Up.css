@@ -155,6 +155,9 @@ header .con-nav {
 
 .bx-search {
   margin-left: -5%;
+  margin-top: -10px;
+  display: inline;
+  z-index: 5;
 }
 
 .logIn {
