@@ -4,7 +4,7 @@ let slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+    showSlides((slideIndex += n));
 }
 // Thumbnail image controls
 function currentSlide(n) {
@@ -16,8 +16,12 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("activeCap");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -40,9 +44,11 @@ function showSlidesAuto() {
         dotsAuto[i].classList.remove("active");
     }
     slideIndexAuto++;
-    if (slideIndexAuto > slidesAuto.length) { slideIndexAuto = 1 }
+    if (slideIndexAuto > slidesAuto.length) {
+        slideIndexAuto = 1;
+    }
     slidesAuto[slideIndexAuto - 1].style.display = "block";
-    dotsAuto[slideIndexAuto - 1].classList.add("active")
+    dotsAuto[slideIndexAuto - 1].classList.add("active");
     setTimeout(showSlidesAuto, 3000); // Change image every 2 seconds
 }
 //-------DUNG AUTO SLIDE KHI CLICK-------
@@ -53,7 +59,7 @@ function stopAutoSlide() {
 // const numberLi = document.querySelectorAll('.slide-content-left-bottom li')
 // numberLi.forEach(function(image, index){
 //     image.addEventListener("click", function(){
-//         document.querySelector(".slide-content-left-top").style.right = index 
+//         document.querySelector(".slide-content-left-top").style.right = index
 //     })
 // })
 // END SLIDE
@@ -73,7 +79,7 @@ setInterval(() => {
     }
 }, 500);
 
-// Trang đăng ký 
+// Trang đăng ký
 function checkNumber(event) {
     event.preventDefault();
     var email = document.getElementById("email").value;
@@ -84,7 +90,9 @@ function checkNumber(event) {
     // Kiểm tra email có đúng định dạng ***@gmail.com
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-        alert("Email không hợp lệ. Vui lòng nhập email đúng định dạng ***@gmail.com.");
+        alert(
+            "Email không hợp lệ. Vui lòng nhập email đúng định dạng ***@gmail.com."
+        );
         return;
     }
 
@@ -114,4 +122,13 @@ function checkNumber(event) {
     }
 
     window.location.href = "./log_In.html";
+}
+
+function timKiem() {
+    var searchInput = document.getElementById("search").value.trim();
+    if (searchInput !== "") {
+        window.location.href =
+            "product.html?search=" + encodeURIComponent(searchInput);
+    }
+    return false;
 }

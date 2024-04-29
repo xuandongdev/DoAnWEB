@@ -618,3 +618,21 @@ header .con-nav {
 .form-login input {
   width: 90%;
 }
+
+.form-search{
+  position: relative;
+}
+
+.form-search form input{
+  position: absolute;
+  margin-top: 15%;
+}
+
+.search-svg{
+  position: absolute;
+  height: 25px;
+  margin-top: 17%;
+  margin-left: 88%;
+  cursor: pointer;
+  z-index: 2;
+}
