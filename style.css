@@ -1,9 +1,10 @@
-*{
+* {
   box-sizing: border-box;
 }
 
 /* flexible */
-.header, .slider {
+.header,
+.slider {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,14 +12,16 @@
 
 /* For medium screens */
 @media (max-width: 768px) {
-  .header, .slider {
+  .header,
+  .slider {
     flex-direction: column;
   }
 }
 
 /* For small screens */
 @media (max-width: 480px) {
-  .header, .slider {
+  .header,
+  .slider {
     flex-direction: column;
   }
 }
@@ -130,10 +133,10 @@ li {
   justify-content: space-between;
 }
 /* LEFT */
-.slide-content-left{
+.slide-content-left {
   width: 75%;
   padding: 0 1%;
-  position:  relative;
+  position: relative;
 }
 
 .slide-content-left-top {
@@ -145,7 +148,7 @@ li {
   height: 100%;
   object-fit: cover;
 }
-.slide-content-left-bottom{
+.slide-content-left-bottom {
   display: flex;
   justify-content: space-between;
   border: 2px solid red;
@@ -160,7 +163,7 @@ li {
   position: relative;
   border-left: 2px solid red;
 }
-.slide-content-left-bottom li:nth-child(1){
+.slide-content-left-bottom li:nth-child(1) {
   border-left: none;
 }
 .slide-content-left-bottom li::before {
@@ -171,28 +174,28 @@ li {
   height: 70%;
   right: 0;
 }
-.slide-content-left-bottom li.active{
+.slide-content-left-bottom li.active {
   background-color: red;
   color: white;
   font-weight: bolder;
 }
 /* RIGHT */
-.slide-content-right{
+.slide-content-right {
   width: 25%;
   display: inline-flex;
   flex-wrap: wrap;
   padding: 0 1%;
 }
-.slide-content-right li{
+.slide-content-right li {
   width: 50%;
   height: 50%;
   text-align: center;
 }
-.slide-content-right li img{
+.slide-content-right li img {
   height: 90%;
   width: 90%;
 }
-.mySlides{
+.mySlides {
   display: none;
 }
 
@@ -218,7 +221,8 @@ li {
   border-radius: 3px 0 0 3px;
 }
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /* Fading animation */
@@ -228,23 +232,27 @@ li {
 }
 
 @keyframes fade {
-  from {opacity: .1}
-  to {opacity: 4}
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 4;
+  }
 }
 /* End Slider */
 /* banner */
-.banner-product{
+.banner-product {
   margin-top: 27%;
 }
-.banner-product img{
+.banner-product img {
   width: 100%;
   height: 100%;
 }
-.banner-product2 img{
+.banner-product2 img {
   margin-top: 1%;
   width: 100%;
 }
-.title-device{
+.title-device {
   font-size: 150%;
   text-align: center;
   color: white;
@@ -253,11 +261,11 @@ li {
 }
 /* product item */
 /* CSS */
-section .product{
+section .product {
   display: block;
   unicode-bidi: isolate;
 }
-.container{
+.container {
   min-width: 100%;
   width: 100%;
   margin: 0 auto;
@@ -268,10 +276,10 @@ section .product{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.lts-product{
+.lts-product {
   display: flex;
   flex-wrap: wrap;
-  animation: append .2s ease-in-out;
+  animation: append 0.2s ease-in-out;
 }
 .lts-product .product-item {
   margin: 0 10px 10px 0;
@@ -283,38 +291,38 @@ section .product{
   text-align: center;
   position: relative;
 }
-.lts-product .product-item .item-img{
+.lts-product .product-item .item-img {
   width: 100%;
   margin: 10px auto 0 auto;
 }
-.lts-product .product-item .item-img img{
+.lts-product .product-item .item-img img {
   width: 70%;
   height: 40%;
   transition: transform 0.3s ease-in-out;
 }
-.lts-product .product-item .item-img img:hover{
+.lts-product .product-item .item-img img:hover {
   transform: scale(1.1);
 }
-.lts-product .product-item .item-info{
+.lts-product .product-item .item-info {
   margin-top: 5px;
   padding: 0 10px 15px 10px;
   margin-bottom: 50px;
   font-size: 15px;
 }
-.lts-product .product-item .item-info .price{
+.lts-product .product-item .item-info .price {
   display: block;
   clear: both;
 }
-label{
+label {
   cursor: default;
 }
-.text-red{
+.text-red {
   color: red;
 }
-strong{
+strong {
   font-weight: bold;
 }
-.lts-product .product-item .note{
+.lts-product .product-item .note {
   margin: 0;
   padding: 5px 10px;
   position: absolute;
@@ -322,10 +330,10 @@ strong{
   text-align: left;
   font-size: 15px;
 }
-.text-orange{
+.text-orange {
   color: orange;
 }
-.lts-product .product-item .item-info .bag{
+.lts-product .product-item .item-info .bag {
   display: inline-block;
   background: #f7941e 0% 0% no-repeat padding-box;
   box-shadow: 0 4px 6px #00000029;
@@ -337,26 +345,26 @@ strong{
 
 @media screen and (min-width: 600px) {
   .lts-product .product-item {
-    flex: 1 0 calc(50% - 10px); 
+    flex: 1 0 calc(50% - 10px);
     width: calc(50% - 10px);
   }
 }
 
 @media screen and (min-width: 900px) {
   .lts-product .product-item {
-    flex: 1 0 calc(33.33% - 10px); 
-    width: calc(33.33% - 10px); 
+    flex: 1 0 calc(33.33% - 10px);
+    width: calc(33.33% - 10px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .lts-product .product-item {
     flex: 1 0 calc(10% - 10px);
-    width: calc(10% - 10px); 
+    width: calc(10% - 10px);
   }
 }
 
-.under{
+.under {
   height: 5%;
 }
 footer {
@@ -382,4 +390,231 @@ footer .gotop i {
   bottom: 1%;
   font-size: 250%;
   color: red;
+}
+
+/* -----------PHẦN RIÊNG CỦA TRANG ĐĂNG NHẬP VÀ ĐĂNG KÝ------------- */
+.logIn {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+}
+
+.line_69 {
+  height: 95vh;
+  background: #a10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page {
+  height: 600px;
+  width: 100%;
+  background: white;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#page .logo {
+  position: absolute;
+  left: 10px;
+}
+
+#page .logo .bxl-html5 {
+  transition: all 0.1s;
+  font-size: 70px;
+  color: rgb(229, 54, 54);
+  animation: ani2 5s infinite linear;
+}
+
+@keyframes ani2 {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(720deg);
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  padding-top: 220px;
+  padding-left: 30px;
+  --width: 50%;
+}
+
+.left .title1 h1 {
+  color: rgb(18, 10, 10);
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.left p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgb(18, 10, 10);
+}
+
+.left button {
+  width: 195px;
+  height: 42px;
+  border: 2px solid rgb(201, 112, 112);
+  background: transparent;
+  margin-top: 100px;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50%);
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right form {
+  border-radius: 5px 0;
+  height: 600px;
+  border: 1px solid rgb(201, 112, 112);
+  box-shadow: 0 0 10px rgb(201, 112, 112);
+}
+
+.right form h1 {
+  color: black;
+  text-align: center;
+  margin: 5%;
+  margin-bottom: 10%;
+}
+
+.form_login input {
+  display: block;
+  width: 350px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  background: #ffe0e0;
+  color: black;
+}
+
+.policy {
+  display: flex;
+  margin-top: -5%;
+}
+
+.policy p {
+  text-align: left;
+}
+
+.policy input {
+  width: 30px;
+  height: 30px;
+}
+
+header .con-nav {
+  background-image: url(./img/Header-Footer/flashSale.gif);
+  background-size: cover;
+}
+
+.nav-item {
+  width: 150px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.signUp_1,
+.logIn {
+  text-align: center;
+}
+
+.navbar-toggler {
+  margin: 10px;
+  border: 2px solid black;
+  background-color: rgb(236, 46, 46);
+}
+
+.col-3 .input-container {
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  transform: translateY(40%);
+  width: 270px;
+}
+
+.bx-search {
+  margin-left: -5%;
+  margin-top: -10px;
+  display: inline;
+  z-index: 5;
+}
+
+.form-signUp div {
+  position: relative;
+  height: 12%;
+}
+
+.form-signUp div label {
+  position: absolute;
+  top: -50%;
+  left: -1%;
+}
+
+.navbar-nav .nav-item a {
+  color: white;
+  padding: 8px;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-nav .nav-item a:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .left,
+  .logo {
+    display: none; /* Ẩn phần left khi màn hình nhỏ hơn hoặc bằng 768px */
+  }
+
+  .right form,
+  .right-login form {
+    width: 205%;
+  }
+
+  .right-login {
+    border: 2px solid white !important;
+  }
+}
+
+/*Phần LogIn  */
+.right-login {
+  width: 50%;
+  border: 2px solid rgb(201, 112, 112);
+}
+
+.form-login {
+  margin-top: 200px;
+}
+
+.form-login input {
+  width: 90%;
 }
