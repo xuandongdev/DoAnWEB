@@ -333,7 +333,10 @@ section .product {
   flex-wrap: wrap;
   animation: append 0.2s ease-in-out;
 }
-
+.item-info a{
+  text-align: center;
+  color: black;
+}
 .lts-product .product-item {
   margin: 0 10px 10px 0;
   flex: 1 0 calc(100% - 10px);
