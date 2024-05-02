@@ -70,14 +70,14 @@ function showCart(){
         nameCell.innerHTML=item.name;
 
         priceCell.innerHTML=formatter.format(item.price);
-        priceCell.style.textAlign="center";
+        priceCell.style.textAlign="left";
 
         numberCell.innerHTML=number;
         numberCell.style.textAlign="center";
 
         sum=number*item.price;
         sumCell.innerHTML=formatter.format(sum);
-        sumCell.style.textAlign="center";
+        sumCell.style.textAlign="left";
 
         removeLink.innerHTML="<i class='fa fa-trash icon-red'></i>";
 
