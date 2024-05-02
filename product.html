@@ -15,6 +15,14 @@
 </head>
 
 <body>
+    <div class="loader"></div>
+    <div class="overlay"></div>
+    <script>
+    window.onload = function() {
+      document.querySelector('.overlay').style.display = "none";
+      document.querySelector('.loader').style.display = "none";
+    }
+    </script>
     <header>
         <div class="container-fluid con-nav">
             <div class="row row-cols-2">
@@ -644,6 +652,17 @@
                 iphoneProducts.style.display = "block";
             });
         });
+
+        // tim kiem
+        function timKiem() {
+            var searchInput = document.getElementById("search").value.trim();
+            if (searchInput !== "") {
+                window.location.href =
+                    "product.html?search=" + encodeURIComponent(searchInput);
+                    alert("Từ khóa tìm kiếm: " + searchInput);
+            }
+            return false;
+        }
     </script>
 </body>
 

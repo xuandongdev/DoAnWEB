@@ -14,6 +14,14 @@
 </head>
 
 <body>
+    <div class="loader"></div>
+    <div class="overlay"></div>
+    <script>
+    window.onload = function() {
+      document.querySelector('.overlay').style.display = "none";
+      document.querySelector('.loader').style.display = "none";
+    }
+    </script>
     <!-- HEADER -->
     <header>
         <div class="container-fluid con-nav">
@@ -615,7 +623,75 @@
             </section>
         </div>
     </main>
+    <script>
+                // START SLIDE
+        //-------CLICK SLIDE-------
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+        // Thumbnail image controls
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+        }
 
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("activeCap");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+        }
+        //-------AUTO SLIDE-------
+        let slideIndexAuto = 0;
+        showSlidesAuto();
+
+        function showSlidesAuto() {
+            let i;
+            let slidesAuto = document.getElementsByClassName("mySlides");
+            let dotsAuto = document.getElementsByClassName("activeCap");
+            for (i = 0; i < slidesAuto.length; i++) {
+                slidesAuto[i].style.display = "none";
+                dotsAuto[i].classList.remove("active");
+            }
+            slideIndexAuto++;
+            if (slideIndexAuto > slidesAuto.length) {
+                slideIndexAuto = 1;
+            }
+            slidesAuto[slideIndexAuto - 1].style.display = "block";
+            dotsAuto[slideIndexAuto - 1].classList.add("active");
+            setTimeout(showSlidesAuto, 3000); // Change image every 2 seconds
+        }
+        //-------DUNG AUTO SLIDE KHI CLICK-------
+        function stopAutoSlide() {
+            clearTimeout(autoSlideTimeout);
+        }
+
+        // tim kiem
+        function timKiem() {
+            var searchInput = document.getElementById("search").value.trim();
+            if (searchInput !== "") {
+                window.location.href =
+                    "product.html?search=" + encodeURIComponent(searchInput);
+            }
+            return false;
+        }
+    </script>
     <footer>
         <div class="footer_end">
             <a href="./policy.html">Chính Sách và Điều Khoản</a>

@@ -14,6 +14,14 @@
 </head>
 
 <body>
+    <div class="loader"></div>
+    <div class="overlay"></div>
+    <script>
+    window.onload = function() {
+      document.querySelector('.overlay').style.display = "none";
+      document.querySelector('.loader').style.display = "none";
+    }
+    </script>
     <header>
         <div class="container-fluid con-nav">
             <div class="row row-cols-2">
@@ -82,7 +90,7 @@
                                 <h1></h1>
                             </div>
                             <p>
-                                Cảm ơn bạn đã ghé đến trang web. Chúng tôi có rất nhiều chương trình khuyến mãi dành riêng cho bạn.
+                                Đăng nhập để xem thêm nhiều chương trình hấp dẫn!!!
                             </p>
                             <button>Explore</button>
                         </div>
@@ -151,6 +159,19 @@
             window.location.href = "./index.html";
             return false; // Để ngăn form gửi đi tự động
         }
+        const title = document.querySelector(".title1 h1");
+        const letter = "elcome !!!";
+        title.textContent = "W";
+        var index = 0;
+
+        setInterval(() => {
+            title.textContent += letter[index];
+            index++;
+            if (index == letter.length + 1) {
+                index = 0;
+                title.textContent = "W";
+            }
+        }, 500);
     </script>
     <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
