@@ -35,6 +35,7 @@ function addCart(code){
         else
             window.localStorage.setItem(code,current+number);
     }
+    alert("Đã thêm" +number+ " sản phẩm " +name+ " vào giỏ hàng. Số lượng sản phẩm " +name+ " đã đặt là "+parseInt(window.localStorage.getItem(code))+".");
 }
 
 function openCart(){
@@ -61,7 +62,7 @@ function showCart(){
         var removeCell=document.createElement("td");
         var removeLink=document.createElement("a");
         var item=itemList[localStorage.key(i)];
-        var number=localStorage.getItem(localStorage.key(i))-1;
+        var number=localStorage.getItem(localStorage.key(i));
 
         photoCell.style.textAlign="center";
         photoCell.innerHTML="<img src='"+item.photo+"' class='round-figure 'width='100px'/>";
