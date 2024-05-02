@@ -106,7 +106,7 @@
 
 
     <main>
-        <div class="logIn">
+        <div class="logIn lang-vi">
             <div class="line_69">
                 <div id="page">
                     <div class="logo">
@@ -144,11 +144,50 @@
                 </div>
             </div>
         </div>
+        <div class="logIn lang-en" style="display: none;">
+            <div class="line_69">
+                <div id="page">
+                    <div class="logo">
+                        <img height="200px" class="bxl-html5" src="img/Header-Footer/iconFinal.png" alt="" />
+                    </div>
+                    <div class="content">
+                        <div class="left">
+                            <div class="title1">
+                                <h1></h1>
+                            </div>
+                            <p>
+                                Sign in to see more exciting programs!!!
+                            </p>
+                            <button>Explore</button>
+                        </div>
+                        <div class="right-login">
+                            <form class="form-login" onsubmit="return validateForm()">
+                                <h1 id="dangNhap">Sign In</h1>
+                                <div class="email m-3">
+                                    <label for="email" class="form-label form-email">Email</label>
+                                    <input type="email" class="form-control form-email2" id="email" name="email" placeholder="Please enter a valid email" required />
+                                </div>
+                                <div class="password m-3">
+                                    <label for="password" class="form-label form-pass">
+                                            Password
+                                        </label>
+                                    <input type="password" minlength="8" class="form-control form-pass2" id="password" name="password" placeholder="Enter your password" required />
+                                </div>
+                                <button id="button" class="btn btn-danger">
+                                        Sign In
+                                    </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="footer_end">
-            <a href="./policy.html">Chính Sách và Điều Khoản</a>
+            <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+            <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
             <a href="https://www.facebook.com/" class="social-icon" target="_blank">
                 <i class="fa-brands fa-meta"></i>
             </a>
@@ -159,13 +198,41 @@
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
-        <p>Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        </p>
+        <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
         </p>
         <a href="#search" class="gotop">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </footer>
     <script>
+        function changeLanguage(language) {
+            console.log('Đã gọi hàm changeLanguage với ngôn ngữ: ', language);
+            // Lấy tất cả các phần tử có lớp lang-vi hoặc lang-en
+            var viElements = document.querySelectorAll('.lang-vi');
+            var enElements = document.querySelectorAll('.lang-en');
+
+            // Nếu ngôn ngữ là tiếng Việt, ẩn các phần tử tiếng Anh và hiện các phần tử tiếng Việt
+            if (language === 'vi') {
+                viElements.forEach(function(element) {
+                    element.style.display = 'block';
+                });
+                enElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+            }
+            // Nếu ngôn ngữ là tiếng Anh, ẩn các phần tử tiếng Việt và hiện các phần tử tiếng Anh
+            else if (language === 'en') {
+                viElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+                enElements.forEach(function(element) {
+                    element.style.display = 'block';
+                });
+            }
+        }
+
         function validateForm() {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
@@ -187,11 +254,11 @@
             window.location.href = "./index.html";
             return false; // Để ngăn form gửi đi tự động
         }
+
         const title = document.querySelector(".title1 h1");
         const letter = "elcome !!!";
         title.textContent = "W";
         var index = 0;
-
         setInterval(() => {
             title.textContent += letter[index];
             index++;
@@ -201,7 +268,6 @@
             }
         }, 500);
     </script>
-    <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
