@@ -113,4 +113,5 @@ function removeCart(code){
         showCart();
     }
 }
+
 window.onstorage = () => {showCart();};
