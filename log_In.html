@@ -17,10 +17,10 @@
     <div class="loader"></div>
     <div class="overlay"></div>
     <script>
-    window.onload = function() {
-      document.querySelector('.overlay').style.display = "none";
-      document.querySelector('.loader').style.display = "none";
-    }
+        window.onload = function() {
+            document.querySelector('.overlay').style.display = "none";
+            document.querySelector('.loader').style.display = "none";
+        }
     </script>
     <header>
         <div class="container-fluid con-nav">
@@ -33,41 +33,70 @@
 
         <!--Thanh Navbar -->
         <div class="container-fluid">
-            <div class="navbar navbar-expand-lg text-white">
+            <div class="navbar navbar-expand-lg text-white navbar-translation">
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+                <div class="select-wrapper">
+                    <div class="navbar-nav ms-auto">
+                        <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
+                            <option value="vi">VI</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="index.html">
+                                <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
                                 </a>
+                                <a href="index_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="product.html">
+                                <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
                                 </a>
+                                <a href="product_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-brands fa-product-hunt"></i> Products
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="cart.html">
+                                <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                                 </a>
+                                <a href="cart_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="log_In.html">
+                                <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="sign_Up.html">
-                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                <a href="log_In_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-user"></i> Log In
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="about_Us.html">
+                                <a href="sign_Up.html" class="nav-link lang-vi">
+                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                </a>
+                                <a href="sign_Up_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> Sign Up
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                </a>
+                                <a href="about_Us_en.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> About Us
                                 </a>
                             </li>
                         </ul>
@@ -76,6 +105,7 @@
             </div>
         </div>
     </header>
+
 
     <main>
         <div class="logIn">
@@ -172,6 +202,31 @@
                 title.textContent = "W";
             }
         }, 500);
+
+        function changeLanguage(language) {
+            // Lấy tất cả các phần tử có lớp lang-vi hoặc lang-en
+            var viElements = document.querySelectorAll('.lang-vi');
+            var enElements = document.querySelectorAll('.lang-en');
+
+            // Nếu ngôn ngữ là tiếng Việt, ẩn các phần tử tiếng Anh và hiện các phần tử tiếng Việt
+            if (language === 'vi') {
+                viElements.forEach(function(element) {
+                    element.style.display = 'block';
+                });
+                enElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+            }
+            // Nếu ngôn ngữ là tiếng Anh, ẩn các phần tử tiếng Việt và hiện các phần tử tiếng Anh
+            else if (language === 'en') {
+                viElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+                enElements.forEach(function(element) {
+                    element.style.display = 'block';
+                });
+            }
+        }
     </script>
     <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
