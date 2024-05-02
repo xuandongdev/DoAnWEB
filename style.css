@@ -20,6 +20,9 @@
     .slider {
         flex-direction: column;
     }
+    .slide-content-right{
+      display: none;
+    }
 }
 
 
@@ -29,6 +32,9 @@
     .header,
     .slider {
         flex-direction: column;
+    }
+    .slide-content-right{
+      display: none;
     }
 }
 
