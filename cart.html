@@ -107,23 +107,44 @@
 
     <main style="margin:0 240px;  max-width: 1024px; border: white;">
         <article class="main-content">
-            <h1 id="cart">Chi Tiết Đơn Hàng</h1>
+            <h1 class="lang-vi" id="cart">Chi Tiết Đơn Hàng</h1>
+            <h1 class="lang-en" id="cart" style="display:none;">Order Details</h1>
             <table id="cartDetail" class="table table-hover cart-table" width="100%">
                 <thead>
                     <tr>
-                        <th colspan="2">Sản phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th>Thành Tiền</th>
+                        <th colspan="2">
+                            <p class="lang-vi">Sản phẩm</p>
+                            <p class="lang-en" style="display: none;">Product</p>
+                        </th>
+                        <th>
+                            <p class="lang-vi">Số lượng</p>
+                            <p class="lang-en" style="display: none;">Quantity</p>
+                        </th>
+                        <th>
+                            <p class="lang-vi">Đơn giá</p>
+                            <p class="lang-en" style="display: none;">Price</p>
+                        </th>
+                        <th>
+                            <p class="lang-vi">Thành tiền</p>
+                            <p class="lang-en" style="display: none;">Subtotal</p>
+                        </th>
                         <th> </th>
                     </tr>
                 </thead>
                 <tbody></tbody>
                 <tfoot>
+                    <tr><td colspan="6" align="right">
+                        <h2>
+                            <p class="lang-vi">TỔNG =</p>
+                            <p class="lang-en" style="display: none;">TOTAL =</p> 
+                            <p id="bill_total"></p>
+                        </h2>
+                    </td></tr>
                     <tr>
                         <td colspan="6">
                             <div class="btn-purchase">
-                                <button type="button" id="checkout-button" class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>THANH TOÁN</button>
+                                <button type="button" id="checkout-button" class="btn btn-dark btn-purchase lang-vi"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>THANH TOÁN</button>
+                                <button type="button" id="checkout-button" class="btn btn-dark btn-purchase lang-en" style="display:none;"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
                             </div>
                         </td>
                     </tr>
@@ -386,7 +407,8 @@
     </script>
     <footer>
         <div class="footer_end">
-            <a href="./policy.html">Chính Sách và Điều Khoản</a>
+            <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+            <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
             <a href="https://www.facebook.com/" class="social-icon" target="_blank">
                 <i class="fa-brands fa-meta"></i>
             </a>
@@ -397,7 +419,9 @@
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
-        <p>Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        </p>
+        <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
         </p>
         <a href="#search" class="gotop">
             <i class="fa-solid fa-chevron-up"></i>
