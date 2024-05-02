@@ -123,3 +123,28 @@ function timKiem() {
     }
     return false;
 }
+
+function changeLanguage(language) {
+    // Lấy tất cả các phần tử có lớp lang-vi hoặc lang-en
+    var viElements = document.querySelectorAll('.lang-vi');
+    var enElements = document.querySelectorAll('.lang-en');
+
+    // Nếu ngôn ngữ là tiếng Việt, ẩn các phần tử tiếng Anh và hiện các phần tử tiếng Việt
+    if (language === 'vi') {
+        viElements.forEach(function(element) {
+            element.style.display = 'block';
+        });
+        enElements.forEach(function(element) {
+            element.style.display = 'none';
+        });
+    }
+    // Nếu ngôn ngữ là tiếng Anh, ẩn các phần tử tiếng Việt và hiện các phần tử tiếng Anh
+    else if (language === 'en') {
+        viElements.forEach(function(element) {
+            element.style.display = 'none';
+        });
+        enElements.forEach(function(element) {
+            element.style.display = 'block';
+        });
+    }
+}

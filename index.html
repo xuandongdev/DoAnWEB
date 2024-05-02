@@ -17,67 +17,84 @@
     <div class="loader"></div>
     <div class="overlay"></div>
     <script>
-    window.onload = function() {
-      document.querySelector('.overlay').style.display = "none";
-      document.querySelector('.loader').style.display = "none";
-    }
+        window.onload = function() {
+            document.querySelector('.overlay').style.display = "none";
+            document.querySelector('.loader').style.display = "none";
+        }
     </script>
-    <!-- HEADER -->
     <header>
         <div class="container-fluid con-nav">
             <div class="row row-cols-2">
-                <div class="col-lg-2 col-3">
+                <div class="col-lg-3 col-1">
                     <a class="btn" href="index.html"><img src="./img/Header-Footer/logoFinal.png" height="100px" /></a>
-                </div>
-                <div class="form-search col-lg-3 col-4">
-                    <form onsubmit="return timKiem()">
-                        <input type="text" placeholder="Nhập nội dung cần tìm ..." id="search" class="form-control">
-                        <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7
-                                376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-                        </svg>
-                    </form>
                 </div>
             </div>
         </div>
 
         <!--Thanh Navbar -->
         <div class="container-fluid">
-            <div class="navbar navbar-expand-lg text-white">
+            <div class="navbar navbar-expand-lg text-white navbar-translation">
+                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+                <div class="select-wrapper">
+                    <div class="navbar-nav ms-auto">
+                        <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
+                        <option value="vi">VI</option>
+                        <option value="en">EN</option>
+                    </select>
+                    </div>
+                </div>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="index.html">
+                                <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
                                 </a>
+                                <a href="index.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="product.html">
+                                <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
                                 </a>
+                                <a href="product.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-brands fa-product-hunt"></i> Products
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="cart.html">
+                                <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                                 </a>
+                                <a href="cart.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="log_In.html">
+                                <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="sign_Up.html">
-                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                <a href="log_In.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-user"></i> Log In
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="about_Us.html">
+                                <a href="sign_Up.html" class="nav-link lang-vi">
+                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                </a>
+                                <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> Sign Up
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                </a>
+                                <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> About Us
                                 </a>
                             </li>
                         </ul>
@@ -622,7 +639,7 @@
         </div>
     </main>
     <script>
-                // START SLIDE
+        // START SLIDE
         //-------CLICK SLIDE-------
         let slideIndex = 1;
         showSlides(slideIndex);

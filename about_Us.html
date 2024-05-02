@@ -18,10 +18,10 @@
     <div class="loader"></div>
     <div class="overlay"></div>
     <script>
-    window.onload = function() {
-      document.querySelector('.overlay').style.display = "none";
-      document.querySelector('.loader').style.display = "none";
-    }
+        window.onload = function() {
+            document.querySelector('.overlay').style.display = "none";
+            document.querySelector('.loader').style.display = "none";
+        }
     </script>
     <header>
         <div class="container-fluid con-nav">
@@ -34,41 +34,68 @@
 
         <!--Thanh Navbar -->
         <div class="container-fluid">
-            <div class="navbar navbar-expand-lg text-white">
+            <div class="navbar navbar-expand-lg text-white navbar-translation">
+                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+                <div class="select-wrapper">
+                    <div class="navbar-nav ms-auto">
+                        <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
+                        <option value="vi">VI</option>
+                        <option value="en">EN</option>
+                    </select>
+                    </div>
+                </div>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="index.html">
+                                <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
                                 </a>
+                                <a href="index.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="product.html">
+                                <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
                                 </a>
+                                <a href="product.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-brands fa-product-hunt"></i> Products
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="cart.html">
+                                <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                                 </a>
+                                <a href="cart.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="log_In.html">
+                                <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="sign_Up.html">
-                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                <a href="log_In.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-solid fa-user"></i> Log In
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="about_Us.html">
+                                <a href="sign_Up.html" class="nav-link lang-vi">
+                                    <i class="fa-regular fa-user"></i> Đăng Ký
+                                </a>
+                                <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> Sign Up
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                </a>
+                                <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
+                                    <i class="fa-regular fa-user"></i> About Us
                                 </a>
                             </li>
                         </ul>
@@ -79,61 +106,67 @@
     </header>
 
     <main>
-      <section class="about-us">
-        <div class="about">
-          <img src="img/Header-Footer/logoFinal.png" class="pic" alt="">
-          <div class="text">
-          <h2>Trung Đông Mobile</h2>
-          <h5>Sản phẩm đa dạng, chính hãng 100%</h5>
-          <p>Cung cấp đầy đủ các thương hiệu điện thoại nổi tiếng trên thị trường như Apple, Samsung, Oppo, Vivo, Xiaomi,... với đa dạng mẫu mã, đáp ứng mọi nhu cầu của khách hàng. Cam kết sản phẩm chính hãng, có nguồn gốc xuất xứ rõ ràng, đi kèm đầy đủ phụ kiện chính hãng.</p>          <div class="data">
-          </div>
-        </div>
-      </div>
-      
-      <div class="about">
-        <div class="text">
-        <h2>Đội Ngũ Nhân Viên </h2>
-        <h5>Dịch vụ chuyên nghiệp</h5>
-<p>Đội ngũ nhân viên tư vấn nhiệt tình, chu đáo, am hiểu về sản phẩm, luôn sẵn sàng giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả. Hỗ trợ tư vấn chọn mua sản phẩm phù hợp với nhu cầu và ngân sách của bạn.
-</p>
-        <div class="data">
-        </div>
-      </div>
-      <img src="img/about/user.png" class="pic" alt="">
-    </div>
-    
-    <div class="about">
-          <img src="img/about/0305-logo-ctu.png" class="pic" alt="">
-          <div class="text">
-          <h2>Về Chúng Tôi</h2>
-          <h5>Sinh Viên Công Nghệ Thông Tin CTU</h5>
-          <p>Sinh viên ngành Công nghệ Thông tin (CNTT) Đại học Cần Thơ là những cá nhân trẻ trung, năng động, đam mê sáng tạo và luôn sẵn sàng chinh phục những thử thách trong lĩnh vực công nghệ tiên tiến.</p>
-          <div class="data">
-          </div>
-        </div>
-      </div>
-    </section>
-  
+        <section class="about-us">
+            <div class="about">
+                <img src="img/Header-Footer/logoFinal.png" class="pic" alt="">
+                <div class="text">
+                    <h2>Trung Đông Mobile</h2>
+                    <h5>Sản phẩm đa dạng, chính hãng 100%</h5>
+                    <p>Cung cấp đầy đủ các thương hiệu điện thoại nổi tiếng trên thị trường như Apple, Samsung, Oppo, Vivo, Xiaomi,... với đa dạng mẫu mã, đáp ứng mọi nhu cầu của khách hàng. Cam kết sản phẩm chính hãng, có nguồn gốc xuất xứ rõ ràng, đi kèm
+                        đầy đủ phụ kiện chính hãng.</p>
+                    <div class="data">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <div class="text">
+                    <h2>Đội Ngũ Nhân Viên </h2>
+                    <h5>Dịch vụ chuyên nghiệp</h5>
+                    <p>Đội ngũ nhân viên tư vấn nhiệt tình, chu đáo, am hiểu về sản phẩm, luôn sẵn sàng giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả. Hỗ trợ tư vấn chọn mua sản phẩm phù hợp với nhu cầu và ngân sách của bạn.
+                    </p>
+                    <div class="data">
+                    </div>
+                </div>
+                <img src="img/about/user.png" class="pic" alt="">
+            </div>
+
+            <div class="about">
+                <img src="img/about/0305-logo-ctu.png" class="pic" alt="">
+                <div class="text">
+                    <h2>Về Chúng Tôi</h2>
+                    <h5>Sinh Viên Công Nghệ Thông Tin CTU</h5>
+                    <p>Sinh viên ngành Công nghệ Thông tin (CNTT) Đại học Cần Thơ là những cá nhân trẻ trung, năng động, đam mê sáng tạo và luôn sẵn sàng chinh phục những thử thách trong lĩnh vực công nghệ tiên tiến.</p>
+                    <div class="data">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-      <div class="footer_end">
-          <a href="./policy.html">Chính Sách và Điều Khoản</a>
-          <a href="https://www.facebook.com/" class="social-icon" target="_blank">
-              <i class="fa-brands fa-meta"></i>
-          </a>
-          <a href="https://www.twitter.com/" class="social-icon" target="_blank">
-              <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="https://github.com/" class="social-icon" target="_blank">
-              <i class="fa-brands fa-github"></i>
-          </a>
-      </div>
-      <p>Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
-      </p>
-      <a href="#search" class="gotop">
-          <i class="fa-solid fa-chevron-up"></i>
-      </a>
-  </footer>
-  </body>
+        <div class="footer_end">
+            <a href="./policy.html">Chính Sách và Điều Khoản</a>
+            <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-meta"></i>
+            </a>
+            <a href="https://www.twitter.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://github.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <p>Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        </p>
+        <a href="#search" class="gotop">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </footer>
+    <script src="script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
