@@ -152,8 +152,7 @@ li {
 }
 
 .slider {
-    padding: 20px 0;
-    height: 1%;
+    padding: 0;
 }
 
 .slide-content {
@@ -301,7 +300,7 @@ li {
 /* banner */
 
 .banner-product {
-    margin-top: 27%;
+    margin-top: 05%;
 }
 
 .banner-product img {
@@ -336,7 +335,6 @@ section .product {
 .container {
     min-width: 100%;
     width: 100%;
-    margin: 0 auto;
 }
 
 .product-list {
