@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng Nhập</title>
+    <title>Đăng Ký</title>
     <link rel="shortcut icon" href="./img/Header-Footer/iconFinal.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css">
 </head>
 
 <body>
@@ -36,20 +34,18 @@
         <!--Thanh Navbar -->
         <div class="container-fluid">
             <div class="navbar navbar-expand-lg text-white navbar-translation">
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
                 <!-- Thêm dropdown cho chọn ngôn ngữ -->
                 <div class="select-wrapper">
                     <div class="navbar-nav ms-auto">
                         <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
-                            <option value="vi">VI</option>
-                            <option value="en">EN</option>
-                        </select>
+                        <option value="vi">VI</option>
+                        <option value="en">EN</option>
+                    </select>
                     </div>
                 </div>
-
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
                         <ul class="navbar-nav">
@@ -57,7 +53,7 @@
                                 <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
                                 </a>
-                                <a href="index_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="index.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-house"></i> Home
                                 </a>
                             </li>
@@ -65,7 +61,7 @@
                                 <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
                                 </a>
-                                <a href="product_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="product.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-brands fa-product-hunt"></i> Products
                                 </a>
                             </li>
@@ -73,7 +69,7 @@
                                 <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                                 </a>
-                                <a href="cart_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="cart.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-cart-shopping"></i> Cart
                                 </a>
                             </li>
@@ -81,7 +77,7 @@
                                 <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
                                 </a>
-                                <a href="log_In_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="log_In.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-user"></i> Log In
                                 </a>
                             </li>
@@ -89,7 +85,7 @@
                                 <a href="sign_Up.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Đăng Ký
                                 </a>
-                                <a href="sign_Up_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> Sign Up
                                 </a>
                             </li>
@@ -97,7 +93,7 @@
                                 <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
                                 </a>
-                                <a href="about_Us_en.html" class="nav-link lang-en" style="display: none;">
+                                <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> About Us
                                 </a>
                             </li>
@@ -204,31 +200,6 @@
                 title.textContent = "W";
             }
         }, 500);
-
-        function changeLanguage(language) {
-            // Lấy tất cả các phần tử có lớp lang-vi hoặc lang-en
-            var viElements = document.querySelectorAll('.lang-vi');
-            var enElements = document.querySelectorAll('.lang-en');
-
-            // Nếu ngôn ngữ là tiếng Việt, ẩn các phần tử tiếng Anh và hiện các phần tử tiếng Việt
-            if (language === 'vi') {
-                viElements.forEach(function(element) {
-                    element.style.display = 'block';
-                });
-                enElements.forEach(function(element) {
-                    element.style.display = 'none';
-                });
-            }
-            // Nếu ngôn ngữ là tiếng Anh, ẩn các phần tử tiếng Việt và hiện các phần tử tiếng Anh
-            else if (language === 'en') {
-                viElements.forEach(function(element) {
-                    element.style.display = 'none';
-                });
-                enElements.forEach(function(element) {
-                    element.style.display = 'block';
-                });
-            }
-        }
     </script>
     <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

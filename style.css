@@ -1256,3 +1256,9 @@ span {
     right: 10px;
     /* Thay đổi giá trị right tùy ý */
 }
+
+@media screen and (max-width: 992px) {
+    .select-wrapper {
+        top: 20px;
+    }
+}
