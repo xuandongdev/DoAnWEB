@@ -1,7 +1,7 @@
 
 #cart
   {
-	color: #F90B6D;
+	color: black;
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;	
 	margin: 40px 16px;		
@@ -18,7 +18,7 @@
 	width: 200px;
 	height: 3px;	
 	transform: skewX(-12deg) translateX(-50%);
-	background: radial-gradient(#cddc39, #fff);	 
+	background: radial-gradient(blue, #fff);	 
 }
 
 .btn-purchase{
