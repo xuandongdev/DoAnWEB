@@ -20,8 +20,8 @@
     .slider {
         flex-direction: column;
     }
-    .slide-content-right{
-      display: none;
+    .slide-content-right {
+        display: none;
     }
 }
 
@@ -33,8 +33,8 @@
     .slider {
         flex-direction: column;
     }
-    .slide-content-right{
-      display: none;
+    .slide-content-right {
+        display: none;
     }
 }
 
@@ -354,10 +354,12 @@ section .product {
     flex-wrap: wrap;
     animation: append 0.2s ease-in-out;
 }
-.item-info a{
-  text-align: center;
-  color: black;
+
+.item-info a {
+    text-align: center;
+    color: black;
 }
+
 .lts-product .product-item {
     margin: 0 10px 10px 0;
     flex: 1 0 calc(100% - 10px);
@@ -622,6 +624,7 @@ footer .gotop i {
 header .con-nav {
     background-image: url(./img/Header-Footer/flashSale.gif);
     background-size: cover;
+    width: 100%;
 }
 
 .nav-item {
@@ -774,7 +777,7 @@ header .con-nav {
         width: 500px;
     }
     ul .nav-item a:hover {
-        margin: 20px 0;
+        /* margin: 20px 0; */
         color: black;
         font-size: 25px;
     }
@@ -877,9 +880,10 @@ header .con-nav {
         }
     }
     .button-Dat-Hang {
-        position: relative;
-        left: 50%;
-        transform: translateX(-25%);
+        /* position: relative;
+        left: 20%;
+        transform: translateX(-25%); */
+        width: 100%;
     }
 }
 
@@ -1145,7 +1149,6 @@ header .con-nav {
     text-align: center;
     margin: 10px auto;
     padding: 15px;
-    width: 40%;
 }
 
 .icon-red {
@@ -1159,7 +1162,7 @@ header .con-nav {
 /* about */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
-* {
+.main-Us {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1172,19 +1175,34 @@ header .con-nav {
     background: #ddd;
 }
 
-.pic {
-    height: auto;
-    width: 400px;
-    margin: 0px 20px;
+@media screen and (max-width:992px) {
+    .pic {
+        display: none;
+    }
+    .about {
+        width: 100%;
+        max-width: 85%;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
-.about {
-    width: 1130px;
-    max-width: 85%;
-    margin: 40px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+@media screen and (min-width:992px) {
+    .pic {
+        height: auto;
+        width: 400px;
+        margin: 0px 20px;
+    }
+    .about {
+        width: 992px;
+        max-width: 85%;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 .text {
