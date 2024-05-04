@@ -15,82 +15,121 @@
 </head>
 
 <body>
-    
-    <header>
+
+    <header id="search">
+        <!-- Container đầy đủ chiều rộng, đặt background-image -->
         <div class="container-fluid con-nav">
-            <div class="row row-cols-2">
+            <!-- Dòng chia thành 1 cột -->
+            <div class="row row-cols-1">
+                <!-- Chiếm 3 cột trên màn hình lớn, 1 cột trên màn hình nhỏ -->
                 <div class="col-lg-3 col-1">
+                    <!-- Logo chuyển đổi thành button -->
                     <a class="btn" href="index.html"><img src="./img/Header-Footer/logoFinal.png" height="100px" /></a>
                 </div>
             </div>
         </div>
 
-        <!--Thanh Navbar -->
+        <!-- Thanh navbar và chuyển đổi ngôn ngữ -->
         <div class="container-fluid">
+            <!-- Navbar sử dụng Bootstrap -->
             <div class="navbar navbar-expand-lg text-white navbar-translation">
-                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+
+                <!-- Dropdown chọn ngôn ngữ -->
                 <div class="select-wrapper">
                     <div class="navbar-nav ms-auto">
+                        <!-- Dropdown ngôn ngữ -->
                         <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
-                        <option value="vi">VI</option>
-                        <option value="en">EN</option>
+                        <!-- Các tùy chọn ngôn ngữ -->
+                        <option value="vi">VI</option> <!-- Tiếng Việt -->
+                        <option value="en">EN</option> <!-- Tiếng Anh -->
                     </select>
                     </div>
                 </div>
+
+                <!-- Toggle button cho responsive design -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <!-- Các mục navbar -->
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
+                        <!-- Danh sách mục điều hướng -->
                         <ul class="navbar-nav">
+                            <!-- Mục Trang Chủ -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="index.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-house"></i> Home
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Sản Phẩm -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="product.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-brands fa-product-hunt"></i> Products
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giỏ Hàng -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="cart.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-cart-shopping"></i> Cart
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Nhập -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="log_In.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-user"></i> Log In
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Ký -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="sign_Up.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Đăng Ký
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> Sign Up
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giới Thiệu -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> About Us
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Các mục khác -->
+                            <!-- Thêm các mục khác tại đây -->
                         </ul>
                     </div>
                 </div>
@@ -108,23 +147,29 @@
             <h2>Samsung</h2>
             <div class="carts">
                 <!-- 1. Hàng đầu tiên  -->
+                <!-- Bắt đầu cart Z Fold5 -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-a04.jpg">
+                    <!-- Tên điện thoại  -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy Z Fold5</h3>
                     </div>
+                    <!-- Thẻ chữ và icon  -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Thẻ số tiền cũ của điện thoại  -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">40.990.000<u>đ</u></p>
                         <span>-26%</span>
                     </div>
+                    <!-- Giá mới của điện thoại  -->
                     <div class="cart-price">
                         <strong>29.990.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của người mua hàng  -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -135,28 +180,43 @@
                         </p>
                         <p class="cart-rating-total">100</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss01')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss01" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss01')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss01" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart Z Fold5 -->
+
+                <!-- Bắt đầu cart A15 5G -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-a15-5g-xanh.jpg">
+                    <!-- Phần tên của sản phẩm  -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy A15 5G</h3>
                     </div>
+                    <!-- Dòng text hiển thị  -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Tiếng việt và tiếng Anh (ẩn)  -->
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của điện thoại  -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">6.290.000<u>đ</u></p>
                         <span>-12%</span>
                     </div>
+                    <!-- Giá mới được cập nhật  -->
                     <div class="cart-price">
                         <strong>5.490.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng  -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -167,28 +227,43 @@
                         </p>
                         <p class="cart-rating-total">62</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss02')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"/></button>
-                        <input id="ss02" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và sản phẩm sẽ được thêm vào giỏ  -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss02')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss02" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart A15 5G -->
+
+                <!-- Bắt đầu cart A25 5G -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-a25-den.jpg">
+                    <!-- Tên của sản phẩm  -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy A25 5G</h3>
                     </div>
+                    <!-- Text online  -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm  -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">6.590.000<u>đ</u></p>
                         <span>-6%</span>
                     </div>
+                    <!-- Giá mới cập nhật  -->
                     <div class="cart-price">
                         <strong>6.190.000<u>đ</u></strong>
                     </div>
+                    <!-- Người dùng đánh giá  -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -199,29 +274,52 @@
                         </p>
                         <p class="cart-rating-total">8</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss03')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss03" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và sản phẩm sẽ được thêm vào giỏ  -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss03')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss03" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart A25 5G -->
+
+                <!-- Bắt đầu cart S24 Ultra 5G-->
                 <div class="cart">
+                    <!-- Ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-s24-ultra-grey.jpg">
+                    <!-- Nội dung sản phẩm -->
                     <div class="cart-content">
-                        <h3 class="cart-title">Samsung Galax S24 Ultra 5G</h3>
+                        <!-- Tiêu đề sản phẩm -->
+                        <h3 class="cart-title">Samsung Galaxy S24 Ultra 5G</h3>
                     </div>
+                    <!-- Trạng thái online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Trạng thái online (vi) -->
                         <p class="lang-vi">Online giá rẻ quá</p>
+                        <!-- Trạng thái online (en) -->
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
+                        <!-- Giá cũ (vi) -->
                         <p style="text-decoration-line: line-through;">37.490.000<u>đ</u></p>
+                        <!-- Phần trừ giảm giá (%) -->
                         <span>-15%</span>
                     </div>
+                    <!-- Giá mới của sản phẩm -->
                     <div class="cart-price">
+                        <!-- Giá mới (vi) -->
                         <strong>31.790.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
+                        <!-- Biểu tượng đánh giá -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -229,31 +327,51 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">9</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss04')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss04" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss04')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss04" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart S24 Ultra 5G-->
+
                 <!-- 2. Hàng thứ 2  -->
+
+                <!-- Bắt đầu cart A34 5G 512GB-->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-a34.jpg">
+                    <!-- Nội dung của sản phẩm -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy A34 5G 512GB</h3>
                     </div>
+                    <!-- Thông tin về tình trạng online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
-                        <p class="lang-vi">Online giá rẻ quá</p>
-                        <p class="lang-en" style="display: none;">On Sale</p>
+                        <!-- Ngôn ngữ tiếng Việt -->
+                        <p class="lang-vi">Thông tin online</p>
+                        <!-- Ngôn ngữ tiếng Anh -->
+                        <p class="lang-en" style="display: none;">Online status</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">9.490.000<u>đ</u></p>
                         <span>-12%</span>
                     </div>
+                    <!-- Giá mới cập nhật -->
                     <div class="cart-price">
                         <strong>8.290.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -262,30 +380,49 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">134</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss05')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss05" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss05')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss05" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart A34 5G 512GB-->
+
+                <!-- Bắt đầu cart M34 5G 128GB-->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-m34-xanh-ngoc.jpg">
+                    <!-- Nội dung của sản phẩm -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy M34 5G 128GB</h3>
                     </div>
+                    <!-- Thông tin về tình trạng online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Ngôn ngữ tiếng Việt -->
                         <p class="lang-vi">Online giá rẻ quá</p>
+                        <!-- Ngôn ngữ tiếng Anh -->
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">7.990.000<u>đ</u></p>
                         <span>-21%</span>
                     </div>
+                    <!-- Giá mới cập nhật -->
                     <div class="cart-price">
                         <strong>6.290.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -294,30 +431,49 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">301</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss06')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss06" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss06')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss06" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart M34 5G 128GB-->
+
+                <!-- Bắt đầu cart M54 5G 256GB-->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-m54-bac.jpg">
+                    <!-- Nội dung của sản phẩm -->
                     <div class="cart-content">
                         <h3 class="cart-title">Samsung Galaxy M54 5G 256GB</h3>
                     </div>
+                    <!-- Thông tin về tình trạng online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Ngôn ngữ tiếng Việt -->
                         <p class="lang-vi">Online giá rẻ quá</p>
+                        <!-- Ngôn ngữ tiếng Anh -->
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">8.990.000<u>đ</u></p>
                         <span>-5%</span>
                     </div>
+                    <!-- Giá mới cập nhật -->
                     <div class="cart-price">
                         <strong>8.490.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -326,30 +482,49 @@
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">31</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss07')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss07" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss07')" style="border-radius: 50px">
+            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss07" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart M54 5G 256GB-->
+
+                <!-- Bắt đầu cart S23 Ultra 5G-->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/sumSung/samsung-galaxy-s23-ultra.jpg">
+                    <!-- Nội dung của sản phẩm -->
                     <div class="cart-content">
-                        <h3 class="cart-title">Samsung Galax S23 Ultra 5G</h3>
+                        <h3 class="cart-title">Samsung Galaxy S23 Ultra 5G</h3>
                     </div>
+                    <!-- Thông tin về tình trạng online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Ngôn ngữ tiếng Việt -->
                         <p class="lang-vi">Online giá rẻ quá</p>
+                        <!-- Ngôn ngữ tiếng Anh -->
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">24.990.000<u>đ</u></p>
                         <span>-15%</span>
                     </div>
+                    <!-- Giá mới cập nhật -->
                     <div class="cart-price">
                         <strong>21.090.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -358,37 +533,57 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">10</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ss08')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ss08" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ss08')" style="border-radius: 50px">
+            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ss08" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart S23 Ultra 5G-->
             </div>
         </div>
+        <!-- Kết thúc SamSung  -->
+
         <!-- Điện thoại IPhone -->
         <div class="iPhone_Phone">
             <h2>IPhone</h2>
             <div class="carts">
                 <!-- 1. Hàng đầu tiên  -->
+                <!-- Bắt đầu cart IPhone 15-->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/Iphone/iphone-15-pink.png">
+                    <!-- Nội dung của sản phẩm -->
                     <div class="cart-content">
                         <h3 class="cart-title">IPhone 15</h3>
                     </div>
+                    <!-- Thông tin về tình trạng online của sản phẩm -->
                     <div class="cart-txt-online">
                         <i class="fas fa-signal"></i>
+                        <!-- Ngôn ngữ tiếng Việt -->
                         <p class="lang-vi">Online giá rẻ quá</p>
+                        <!-- Ngôn ngữ tiếng Anh -->
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
+                    <!-- Giá cũ của sản phẩm -->
                     <div class="cart-price-old">
                         <p style="text-decoration-line: line-through;">22.990.000<u>đ</u></p>
                         <span>-15%</span>
                     </div>
+                    <!-- Giá mới cập nhật -->
                     <div class="cart-price">
                         <strong>19.490.000<u>đ</u></strong>
                     </div>
+                    <!-- Đánh giá của khách hàng -->
                     <div class="cart-rating">
                         <p>
                             <i class="fa-solid fa-star"></i>
@@ -397,31 +592,47 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </p>
+                        <!-- Tổng số đánh giá -->
                         <p class="cart-rating-total">34</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip01')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip01" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip01')" style="border-radius: 50px">
+            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip01" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 15-->
+
+                <!-- Bắt đầu cart IPhone 15 Plus -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/Iphone/iphone-15-plus-blue.png">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 15 Plus</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">25.990.000<u>đ</u></p>
                         <span>-11%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>22.990.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -431,29 +642,44 @@
                         </p>
                         <p class="cart-rating-total">31</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip02')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip02" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip02')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip02" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 15 Plus -->
+
+                <!-- Bắt đầu cart IPhone 15 Pro  -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/Iphone/iphone-15-pro-finish-select.png">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 15 Pro</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">28.990.000<u>đ</u></p>
                         <span>-12%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>25.490.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -463,29 +689,45 @@
                         </p>
                         <p class="cart-rating-total">21</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip03')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip03" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip03')" style="border-radius: 50px">
+                                <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                            </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip03" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
+
                 </div>
+                <!-- Kết thúc cart IPhone 15 Pro  -->
+
+                <!-- Bắt đầu cart IPhone 15 Pro Max -->
                 <div class="cart">
                     <img class="cart-image" src="./img/product/Iphone/iphone-15-pro-max-natural-titanium.png">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 15 Pro Max</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">34.990.000<u>đ</u></p>
                         <span>-15%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>29.490.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -495,30 +737,46 @@
                         </p>
                         <p class="cart-rating-total">107</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip04')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip04" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip04')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip04" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 15 Pro Max -->
+
                 <!-- 2. Hàng thứ 2  -->
+                <!-- Bắt đầu cart IPhone 11  -->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/Iphone/iphone-11.jpg">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 11</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">11.790.000<u>đ</u></p>
                         <span>-23%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>8.990.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -528,29 +786,45 @@
                         </p>
                         <p class="cart-rating-total">848</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip05')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip05" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip05')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip05" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 11 -->
+
+                <!-- Bắt đầu cart IPhone 13  -->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/Iphone/iphone-13.jpg">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 13</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">17.790.000<u>đ</u></p>
                         <span>-21%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>13.990.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -560,29 +834,45 @@
                         </p>
                         <p class="cart-rating-total">499</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip06')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip06" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip06')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip06" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 13 -->
+
+                <!-- Bắt đầu cart IPhone 14  -->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/Iphone/iphone-14.jpeg">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 14</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">23.990.000<u>đ</u></p>
                         <span>-16%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>20.090.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -592,29 +882,45 @@
                         </p>
                         <p class="cart-rating-total">444</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip07')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip07" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip07')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip07" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 14  -->
+
+                <!-- Bắt đầu cart IPhone 12  -->
                 <div class="cart">
+                    <!-- Hình ảnh sản phẩm -->
                     <img class="cart-image" src="./img/product/Iphone/iphone-12.jpg">
                     <div class="cart-content">
+                        <!-- Tiêu đề sản phẩm -->
                         <h3 class="cart-title">IPhone 12</h3>
                     </div>
                     <div class="cart-txt-online">
+                        <!-- Thông tin về tình trạng online của sản phẩm -->
                         <i class="fas fa-signal"></i>
                         <p class="lang-vi">Online giá rẻ quá</p>
                         <p class="lang-en" style="display: none;">On Sale</p>
                     </div>
                     <div class="cart-price-old">
+                        <!-- Giá cũ của sản phẩm -->
                         <p style="text-decoration-line: line-through;">17.990.000<u>đ</u></p>
                         <span>-16%</span>
                     </div>
                     <div class="cart-price">
+                        <!-- Giá mới của sản phẩm -->
                         <strong>14.990.000<u>đ</u></strong>
                     </div>
                     <div class="cart-rating">
+                        <!-- Đánh giá của sản phẩm -->
                         <p>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -624,19 +930,32 @@
                         </p>
                         <p class="cart-rating-total">35</p>
                     </div>
-                    <div class="button-Dat-Hang">
-                        <button onclick="addCart('ip08')" style="border-radius: 50px;"><img src="./img/product/button-dat-hang.gif" alt="" height="50px"></button>
-                        <input id="ip08" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
+                    <!-- Nút đặt hàng và số lượng sản phẩm -->
+                    <div class="button-Dat-Hang d-flex align-items-center">
+                        <!-- Nút đặt hàng -->
+                        <button class="w-50" onclick="addCart('ip08')" style="border-radius: 50px">
+                            <img src="./img/product/button-dat-hang.gif" class="img-fluid">
+                        </button>
+                        <!-- Khoảng cách giữa nút và input -->
+                        <div style="width: 20px;"></div>
+                        <!-- Số lượng sản phẩm -->
+                        <input id="ip08" class="w-50" type="number" min="0" max="99" size="3" value="0" onKeyDown="return false" />
                     </div>
                 </div>
+                <!-- Kết thúc cart IPhone 12  -->
+
             </div>
         </div>
     </main>
 
     <footer>
+        <!-- Phần cuối cùng của footer -->
         <div class="footer_end">
+            <!-- Liên kết đến trang Chính Sách và Điều Khoản -->
             <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+            <!-- Liên kết đến trang Terms and Conditions (ẩn) -->
             <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
+            <!-- Các biểu tượng mạng xã hội -->
             <a href="https://www.facebook.com/" class="social-icon" target="_blank">
                 <i class="fa-brands fa-meta"></i>
             </a>
@@ -647,11 +966,11 @@
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
+        <!-- Thông điệp bản quyền -->
         <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
-        </p>
+        <!-- Thông điệp bản quyền (ẩn) -->
         <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
-        </p>
-        
+        <!-- Nút "Quay về đầu trang" -->
         <a href="#search" class="gotop">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
@@ -660,44 +979,31 @@
         <script src="script.js" defer></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Lấy ra các phần tử cần thao tác
+                var samsungBtn = document.querySelector(".samSung");
+                var samsungProducts = document.querySelector(".samSung_Phone");
+                var iphoneBtn = document.querySelector(".iPhone");
+                var iphoneProducts = document.querySelector(".iPhone_Phone");
+
+                // Thêm trình nghe sự kiện cho nút Samsung
+                samsungBtn.addEventListener("click", function() {
+                    // Ẩn tất cả sản phẩm điện thoại
+                    samsungProducts.style.display = "block";
+                    iphoneProducts.style.display = "none";
+                });
+
+                // Thêm trình nghe sự kiện cho nút iPhone
+                iphoneBtn.addEventListener("click", function() {
+                    // Ẩn tất cả sản phẩm điện thoại
+                    samsungProducts.style.display = "none";
+                    iphoneProducts.style.display = "block";
+                });
+            });
+        </script>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Lấy ra các phần tử cần thao tác
-            var samsungBtn = document.querySelector(".samSung");
-            var samsungProducts = document.querySelector(".samSung_Phone");
-            var iphoneBtn = document.querySelector(".iPhone");
-            var iphoneProducts = document.querySelector(".iPhone_Phone");
 
-            // Thêm trình nghe sự kiện cho nút Samsung
-            samsungBtn.addEventListener("click", function() {
-                // Ẩn tất cả sản phẩm điện thoại
-                samsungProducts.style.display = "block";
-                iphoneProducts.style.display = "none";
-            });
-
-            // Thêm trình nghe sự kiện cho nút iPhone
-            iphoneBtn.addEventListener("click", function() {
-                // Ẩn tất cả sản phẩm điện thoại
-                samsungProducts.style.display = "none";
-                iphoneProducts.style.display = "block";
-            });
-        });
-
-        // tim kiem
-        function timKiem() {
-            var searchInput = document.getElementById("search").value.trim();
-            if (searchInput !== "") {
-                window.location.href =
-                    "product.html?search=" + encodeURIComponent(searchInput);
-                alert("Từ khóa tìm kiếm: " + searchInput);
-            }
-            return false;
-        }
-    </script>
-    <script src="script.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

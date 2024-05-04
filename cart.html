@@ -22,82 +22,120 @@
 </head>
 
 <body>
-    
-    <header>
+    <header id="search">
+        <!-- Container đầy đủ chiều rộng, đặt background-image -->
         <div class="container-fluid con-nav">
-            <div class="row row-cols-2">
+            <!-- Dòng chia thành 1 cột -->
+            <div class="row row-cols-1">
+                <!-- Chiếm 3 cột trên màn hình lớn, 1 cột trên màn hình nhỏ -->
                 <div class="col-lg-3 col-1">
+                    <!-- Logo chuyển đổi thành button -->
                     <a class="btn" href="index.html"><img src="./img/Header-Footer/logoFinal.png" height="100px" /></a>
                 </div>
             </div>
         </div>
 
-        <!--Thanh Navbar -->
+        <!-- Thanh navbar và chuyển đổi ngôn ngữ -->
         <div class="container-fluid">
+            <!-- Navbar sử dụng Bootstrap -->
             <div class="navbar navbar-expand-lg text-white navbar-translation">
-                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+
+                <!-- Dropdown chọn ngôn ngữ -->
                 <div class="select-wrapper">
                     <div class="navbar-nav ms-auto">
+                        <!-- Dropdown ngôn ngữ -->
                         <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
-                        <option value="vi">VI</option>
-                        <option value="en">EN</option>
+                        <!-- Các tùy chọn ngôn ngữ -->
+                        <option value="vi">VI</option> <!-- Tiếng Việt -->
+                        <option value="en">EN</option> <!-- Tiếng Anh -->
                     </select>
                     </div>
                 </div>
+
+                <!-- Toggle button cho responsive design -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <!-- Các mục navbar -->
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
+                        <!-- Danh sách mục điều hướng -->
                         <ul class="navbar-nav">
+                            <!-- Mục Trang Chủ -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="index.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-house"></i> Home
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Sản Phẩm -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="product.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-brands fa-product-hunt"></i> Products
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giỏ Hàng -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="cart.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-cart-shopping"></i> Cart
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Nhập -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="log_In.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-user"></i> Log In
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Ký -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="sign_Up.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Đăng Ký
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> Sign Up
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giới Thiệu -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> About Us
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Các mục khác -->
+                            <!-- Thêm các mục khác tại đây -->
                         </ul>
                     </div>
                 </div>
@@ -105,11 +143,16 @@
         </div>
     </header>
 
-    <main style="margin:0 240px;  max-width: 1024px; border: white;">
+    <!-- Dùng bootstrap class="container-lg mx-15 border border-white" -->
+    <main class="container-lg mx-lg-15 border border-white">
+        <!-- Phần chính của trang  -->
         <article class="main-content">
+            <!-- Phần tiếng Việt và tiếng Anh (ẩn) nằm xen kẻ nhau -->
             <h1 class="lang-vi" id="cart">Chi Tiết Đơn Hàng</h1>
             <h1 class="lang-en" id="cart" style="display:none;">Order Details</h1>
-            <table id="cartDetail" class="table table-hover cart-table" width="100%">
+            <!-- Dùng bootstrap class="table table-hover" áp dụng mặc định bảng và hiệu ứng di chuột qua  -->
+            <table id="cartDetail" class="container-fluid table table-hover cart-table">
+                <!-- Phần tiêu đề cho biết cột có chức năng gì  -->
                 <thead>
                     <tr>
                         <th colspan="2">
@@ -124,27 +167,62 @@
                             <p class="lang-vi">Đơn giá</p>
                             <p class="lang-en" style="display: none;">Price</p>
                         </th>
-                        <th>
+                        <th colspan="2">
                             <p class="lang-vi">Thành tiền</p>
                             <p class="lang-en" style="display: none;">Subtotal</p>
                         </th>
-                        <th> </th>
                     </tr>
                 </thead>
+                <!-- Ở trang sản phẩm khi ấn mua ngay thì sản phẩm sẽ hiện ở trong tbody  -->
                 <tbody></tbody>
+                <!-- Phần tổng tiền và thanh toán  -->
                 <tfoot>
-                    <tr><td colspan="6" align="right">
-                        <h2>
-                            <p class="lang-vi">TỔNG =</p>
-                            <p class="lang-en" style="display: none;">TOTAL =</p> 
+                    <tr>
+                        <td colspan="4" class="text-end">
+                            <h2>
+                                <p class="lang-vi">TỔNG =</p>
+                                <p class="lang-en" style="display: none;">TOTAL =</p>
+                            </h2>
+                        </td>
+                        <td colspan="2">
                             <p id="bill_total"></p>
-                        </h2>
-                    </td></tr>
+                        </td>
+                    </tr>
                     <tr>
                         <td colspan="6">
-                            <div class="btn-purchase">
-                                <button type="button" id="checkout-button" class="btn btn-dark btn-purchase lang-vi"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>THANH TOÁN</button>
-                                <button type="button" id="checkout-button" class="btn btn-dark btn-purchase lang-en" style="display:none;"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+                            <!-- Nút thanh toán và modal điền thông tin  -->
+                            <!-- Dùng bootstrap class="d-flex justify-content-center" để căn giữa  -->
+                            <div class="btn-purchase d-flex justify-content-center">
+                                <button type="button" id="checkout-button" class="btn btn-dark lang-vi">
+                                    <i class="fa-solid fa-cart-shopping m-2"></i>THANH TOÁN
+                                </button>
+                                <button type="button" id="checkout-button" class="btn btn-dark lang-en" style="display:none">
+                                    <i class="fa-solid fa-cart-shopping m-2"></i>PURCHASE
+                                </button>
+                            </div>
+                            <!-- modal điền thông tin  -->
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <!-- function checkCustomerInfo(this) kiểm tra tính hợp lệ người dùng nhập  -->
+                                    <!-- Form nhận hàng  -->
+                                    <form id="customer-info-form" onsubmit="return checkCustomerInfo(this)">
+                                        <!-- Điền tên  -->
+                                        <label for="name">Tên:</label><br>
+                                        <input type="text" id="name" name="name" required><br>
+                                        <!-- Điền Email  -->
+                                        <label for="email">Email:</label><br>
+                                        <input type="email" id="email" name="email"><br>
+                                        <!-- Điền số điện thoại  -->
+                                        <label for="phone">Số điện thoại:</label><br>
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+                                        <!-- Điền địa chỉ nhận hàng  -->
+                                        <label for="address">Địa chỉ nhận hàng:</label><br>
+                                        <input type="text" id="address" name="address" required><br>
+                                        <!-- Nút submit để gửi đi thông tin  -->
+                                        <input type="submit" value="Submit">
+                                    </form>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -164,6 +242,35 @@
             </table>
         </article>
     </main>
+
+    <footer>
+        <!-- Phần cuối cùng của footer -->
+        <div class="footer_end">
+            <!-- Liên kết đến trang Chính Sách và Điều Khoản -->
+            <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+            <!-- Liên kết đến trang Terms and Conditions (ẩn) -->
+            <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
+            <!-- Các biểu tượng mạng xã hội -->
+            <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-meta"></i>
+            </a>
+            <a href="https://www.twitter.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://github.com/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <!-- Thông điệp bản quyền -->
+        <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
+        <!-- Thông điệp bản quyền (ẩn) -->
+        <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
+        <!-- Nút "Quay về đầu trang" -->
+        <a href="#search" class="gotop">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </footer>
+
     <script>
         var modal = document.getElementById("modal");
         var btn = document.getElementById("checkout-button");
@@ -401,28 +508,6 @@
             showCart();
         };
     </script>
-    <footer>
-        <div class="footer_end">
-            <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
-            <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
-            <a href="https://www.facebook.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-meta"></i>
-            </a>
-            <a href="https://www.twitter.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://github.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
-        </p>
-        <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
-        </p>
-        <a href="#search" class="gotop">
-            <i class="fa-solid fa-chevron-up"></i>
-        </a>
-    </footer>
     <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

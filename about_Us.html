@@ -15,89 +15,131 @@
 </head>
 
 <body>
+    <!-- Loader hiển thị khi trang được tải -->
     <div class="loader"></div>
     <div class="overlay"></div>
     <script>
         window.onload = function() {
+            // Ẩn loader và overlay khi trang đã tải xong
             document.querySelector('.overlay').style.display = "none";
             document.querySelector('.loader').style.display = "none";
         }
     </script>
-    <header>
+
+    <header id="search">
+        <!-- Container đầy đủ chiều rộng, đặt background-image -->
         <div class="container-fluid con-nav">
-            <div class="row row-cols-2">
+            <!-- Dòng chia thành 1 cột -->
+            <div class="row row-cols-1">
+                <!-- Chiếm 3 cột trên màn hình lớn, 1 cột trên màn hình nhỏ -->
                 <div class="col-lg-3 col-1">
+                    <!-- Logo chuyển đổi thành button -->
                     <a class="btn" href="index.html"><img src="./img/Header-Footer/logoFinal.png" height="100px" /></a>
                 </div>
             </div>
         </div>
 
-        <!--Thanh Navbar -->
+        <!-- Thanh navbar và chuyển đổi ngôn ngữ -->
         <div class="container-fluid">
+            <!-- Navbar sử dụng Bootstrap -->
             <div class="navbar navbar-expand-lg text-white navbar-translation">
-                <!-- Thêm dropdown cho chọn ngôn ngữ -->
+
+                <!-- Dropdown chọn ngôn ngữ -->
                 <div class="select-wrapper">
                     <div class="navbar-nav ms-auto">
+                        <!-- Dropdown ngôn ngữ -->
                         <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
-                        <option value="vi">VI</option>
-                        <option value="en">EN</option>
+                        <!-- Các tùy chọn ngôn ngữ -->
+                        <option value="vi">VI</option> <!-- Tiếng Việt -->
+                        <option value="en">EN</option> <!-- Tiếng Anh -->
                     </select>
                     </div>
                 </div>
+
+                <!-- Toggle button cho responsive design -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <!-- Các mục navbar -->
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="navbar-nav">
+                        <!-- Danh sách mục điều hướng -->
                         <ul class="navbar-nav">
+                            <!-- Mục Trang Chủ -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="index.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-house"></i> Trang Chủ
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="index.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-house"></i> Home
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Sản Phẩm -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="product.html" class="nav-link lang-vi">
                                     <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="product.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-brands fa-product-hunt"></i> Products
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giỏ Hàng -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="cart.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="cart.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-cart-shopping"></i> Cart
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Nhập -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="log_In.html" class="nav-link lang-vi">
                                     <i class="fa-solid fa-user"></i> Đăng Nhập
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="log_In.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-solid fa-user"></i> Log In
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Đăng Ký -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="sign_Up.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Đăng Ký
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> Sign Up
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Mục Giới Thiệu -->
                             <li class="nav-item">
+                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
                                 <a href="about_Us.html" class="nav-link lang-vi">
                                     <i class="fa-regular fa-user"></i> Giới Thiệu
+                                    <!-- Tiếng Việt -->
                                 </a>
                                 <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
                                     <i class="fa-regular fa-user"></i> About Us
+                                    <!-- Tiếng Anh (ẩn) -->
                                 </a>
                             </li>
+                            <!-- Các mục khác -->
+                            <!-- Thêm các mục khác tại đây -->
                         </ul>
                     </div>
                 </div>
@@ -105,10 +147,12 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-Us">
         <section class="about-us">
+            <!-- Giới thiệu về cửa hàng TrungĐôngMobile  -->
             <div class="about">
                 <img src="img/Header-Footer/logoFinal.png" class="pic" alt="">
+                <!-- Phần tiếng Việt của trang  -->
                 <div class="text lang-vi">
                     <h2>Trung Đông Mobile</h2>
                     <h5>Sản phẩm đa dạng, chính hãng 100%</h5>
@@ -117,7 +161,7 @@
                     <div class="data">
                     </div>
                 </div>
-
+                <!-- Phần tiếng Anh của trang (ẩn) -->
                 <div class="text lang-en" style="display: none;">
                     <h2>Trung Dong Mobile</h2>
                     <h5>Diverse products, 100% genuine</h5>
@@ -128,7 +172,9 @@
             </div>
 
             <div class="about">
+                <!-- Phần bằng tiếng Việt  -->
                 <div class="text lang-vi">
+                    <!-- Giới thiệu về tính chuyên nghiệp khi mua sắm bên cửa hàng  -->
                     <h2>Đội Ngũ Nhân Viên </h2>
                     <h5>Dịch vụ chuyên nghiệp</h5>
                     <p>Đội ngũ nhân viên tư vấn nhiệt tình, chu đáo, am hiểu về sản phẩm, luôn sẵn sàng giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả. Hỗ trợ tư vấn chọn mua sản phẩm phù hợp với nhu cầu và ngân sách của bạn.
@@ -137,6 +183,7 @@
                     </div>
                 </div>
 
+                <!-- Phần bằng tiếng Anh (ẩn)  -->
                 <div class="text lang-en" style="display: none;">
                     <h2>Personnel</h2>
                     <h5>Professional services</h5>
@@ -149,15 +196,17 @@
             </div>
 
             <div class="about">
+                <!-- Phần về chúng tôi, sinh viên CTU  -->
                 <img src="img/about/0305-logo-ctu.png" class="pic" alt="">
+                <!-- Phần tiếng Việt  -->
                 <div class="text lang-vi">
                     <h2>Về Chúng Tôi</h2>
                     <h5>Sinh Viên Công Nghệ Thông Tin CTU</h5>
-                    <p>Sinh viên ngành Công nghệ Thông tin (CNTT) Đại học Cần Thơ là những cá nhân trẻ trung, năng động, đam mê sáng tạo và luôn sẵn sàng chinh phục những thử thách trong lĩnh vực công nghệ tiên tiến.</p>
+                    <p>Sinh viên trường Công nghệ Thông tin (CNTT) Đại học Cần Thơ là những cá nhân trẻ trung, năng động, đam mê sáng tạo và luôn sẵn sàng chinh phục những thử thách trong lĩnh vực công nghệ tiên tiến.</p>
                     <div class="data">
                     </div>
                 </div>
-
+                <!-- Phần tiếng Anh  -->
                 <div class="text lang-en" style="display: none;">
                     <h2>About Us</h2>
                     <h5>CTU Information Technology Students</h5>
@@ -170,9 +219,13 @@
     </main>
 
     <footer>
+        <!-- Phần cuối cùng của footer -->
         <div class="footer_end">
+            <!-- Liên kết đến trang Chính Sách và Điều Khoản -->
             <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+            <!-- Liên kết đến trang Terms and Conditions (ẩn) -->
             <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
+            <!-- Các biểu tượng mạng xã hội -->
             <a href="https://www.facebook.com/" class="social-icon" target="_blank">
                 <i class="fa-brands fa-meta"></i>
             </a>
@@ -183,11 +236,11 @@
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
+        <!-- Thông điệp bản quyền -->
         <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
-        </p>
+        <!-- Thông điệp bản quyền (ẩn) -->
         <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
-        </p>
-        
+        <!-- Nút "Quay về đầu trang" -->
         <a href="#search" class="gotop">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
