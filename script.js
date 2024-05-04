@@ -17,6 +17,17 @@ $(document).ready(function(){
     })
 });
 
+// cài đặt khi người dùng cuộn đến vị trí banner-title thì sẽ chạy hiệu ứng
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.banner-title');
+    var position = element.getBoundingClientRect();
+  
+    // checking whether fully visible
+    if(position.top >= 0 && position.bottom <= window.innerHeight) {
+      element.classList.add('animate');
+    }
+});
+
 // Trang đăng ký
 function checkNumber(event) {
     event.preventDefault();

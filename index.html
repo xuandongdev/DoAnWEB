@@ -1,710 +1,1073 @@
 <!DOCTYPE html>
 <html lang="vi">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang Chủ</title>
-    <link rel="shortcut icon" href="./img/Header-Footer/iconFinal.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    <link
+      rel="shortcut icon"
+      href="./img/Header-Footer/iconFinal.png"
+      type="image/x-icon"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Loader hiển thị khi trang được tải -->
     <div class="loader"></div>
     <div class="overlay"></div>
     <script>
-        window.onload = function() {
-            // Ẩn loader và overlay khi trang đã tải xong
-            document.querySelector('.overlay').style.display = "none";
-            document.querySelector('.loader').style.display = "none";
-        }
+      window.onload = function () {
+        // Ẩn loader và overlay khi trang đã tải xong
+        document.querySelector(".overlay").style.display = "none";
+        document.querySelector(".loader").style.display = "none";
+      };
     </script>
 
     <header id="search">
-        <!-- Container đầy đủ chiều rộng, đặt background-image -->
-        <div class="container-fluid con-nav">
-            <!-- Dòng chia thành 1 cột -->
-            <div class="row row-cols-1">
-                <!-- Chiếm 3 cột trên màn hình lớn, 1 cột trên màn hình nhỏ -->
-                <div class="col-lg-3 col-1">
-                    <!-- Logo chuyển đổi thành button -->
-                    <a class="btn" href="index.html"><img src="./img/Header-Footer/logoFinal.png" height="100px" /></a>
-                </div>
-            </div>
+      <!-- Container đầy đủ chiều rộng, đặt background-image -->
+      <div class="container-fluid con-nav">
+        <!-- Dòng chia thành 1 cột -->
+        <div class="row row-cols-1">
+          <!-- Chiếm 3 cột trên màn hình lớn, 1 cột trên màn hình nhỏ -->
+          <div class="col-lg-3 col-1">
+            <!-- Logo chuyển đổi thành button -->
+            <a class="btn" href="index.html"
+              ><img src="./img/Header-Footer/logoFinal.png" height="100px"
+            /></a>
+          </div>
         </div>
+      </div>
 
-        <!-- Thanh navbar và chuyển đổi ngôn ngữ -->
-        <div class="container-fluid">
-            <!-- Navbar sử dụng Bootstrap -->
-            <div class="navbar navbar-expand-lg text-white navbar-translation">
-
-                <!-- Dropdown chọn ngôn ngữ -->
-                <div class="select-wrapper">
-                    <div class="navbar-nav ms-auto">
-                        <!-- Dropdown ngôn ngữ -->
-                        <select class="form-select bg-danger text-white" onchange="changeLanguage(this.value)">
-                        <!-- Các tùy chọn ngôn ngữ -->
-                        <option value="vi">VI</option> <!-- Tiếng Việt -->
-                        <option value="en">EN</option> <!-- Tiếng Anh -->
-                    </select>
-                    </div>
-                </div>
-
-                <!-- Toggle button cho responsive design -->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-                <!-- Các mục navbar -->
-                <div class="collapse navbar-collapse" id="collapse">
-                    <div class="navbar-nav">
-                        <!-- Danh sách mục điều hướng -->
-                        <ul class="navbar-nav">
-                            <!-- Mục Trang Chủ -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="index.html" class="nav-link lang-vi">
-                                    <i class="fa-solid fa-house"></i> Trang Chủ
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="index.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-solid fa-house"></i> Home
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Mục Sản Phẩm -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="product.html" class="nav-link lang-vi">
-                                    <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="product.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-brands fa-product-hunt"></i> Products
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Mục Giỏ Hàng -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="cart.html" class="nav-link lang-vi">
-                                    <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="cart.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-solid fa-cart-shopping"></i> Cart
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Mục Đăng Nhập -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="log_In.html" class="nav-link lang-vi">
-                                    <i class="fa-solid fa-user"></i> Đăng Nhập
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="log_In.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-solid fa-user"></i> Log In
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Mục Đăng Ký -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="sign_Up.html" class="nav-link lang-vi">
-                                    <i class="fa-regular fa-user"></i> Đăng Ký
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="sign_Up.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-regular fa-user"></i> Sign Up
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Mục Giới Thiệu -->
-                            <li class="nav-item">
-                                <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
-                                <a href="about_Us.html" class="nav-link lang-vi">
-                                    <i class="fa-regular fa-user"></i> Giới Thiệu
-                                    <!-- Tiếng Việt -->
-                                </a>
-                                <a href="about_Us.html" class="nav-link lang-en" style="display: none;">
-                                    <i class="fa-regular fa-user"></i> About Us
-                                    <!-- Tiếng Anh (ẩn) -->
-                                </a>
-                            </li>
-                            <!-- Các mục khác -->
-                            <!-- Thêm các mục khác tại đây -->
-                        </ul>
-                    </div>
-                </div>
+      <!-- Thanh navbar và chuyển đổi ngôn ngữ -->
+      <div class="container-fluid">
+        <!-- Navbar sử dụng Bootstrap -->
+        <div class="navbar navbar-expand-lg text-white navbar-translation">
+          <!-- Dropdown chọn ngôn ngữ -->
+          <div class="select-wrapper">
+            <div class="navbar-nav ms-auto">
+              <!-- Dropdown ngôn ngữ -->
+              <select
+                class="form-select bg-danger text-white"
+                onchange="changeLanguage(this.value)"
+              >
+                <!-- Các tùy chọn ngôn ngữ -->
+                <option value="vi">VI</option>
+                <!-- Tiếng Việt -->
+                <option value="en">EN</option>
+                <!-- Tiếng Anh -->
+              </select>
             </div>
+          </div>
+
+          <!-- Toggle button cho responsive design -->
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Các mục navbar -->
+          <div class="collapse navbar-collapse" id="collapse">
+            <div class="navbar-nav">
+              <!-- Danh sách mục điều hướng -->
+              <ul class="navbar-nav">
+                <!-- Mục Trang Chủ -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="index.html" class="nav-link lang-vi">
+                    <i class="fa-solid fa-house"></i> Trang Chủ
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="index.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-house"></i> Home
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Mục Sản Phẩm -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="product.html" class="nav-link lang-vi">
+                    <i class="fa-brands fa-product-hunt"></i> Sản Phẩm
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="product.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-brands fa-product-hunt"></i> Products
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Mục Giỏ Hàng -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="cart.html" class="nav-link lang-vi">
+                    <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="cart.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Mục Đăng Nhập -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="log_In.html" class="nav-link lang-vi">
+                    <i class="fa-solid fa-user"></i> Đăng Nhập
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="log_In.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-user"></i> Log In
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Mục Đăng Ký -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="sign_Up.html" class="nav-link lang-vi">
+                    <i class="fa-regular fa-user"></i> Đăng Ký
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="sign_Up.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-regular fa-user"></i> Sign Up
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Mục Giới Thiệu -->
+                <li class="nav-item">
+                  <!-- Dùng bootstrap class="nav-link" định dạng giao diện cho thẻ link  -->
+                  <a href="about_Us.html" class="nav-link lang-vi">
+                    <i class="fa-regular fa-user"></i> Giới Thiệu
+                    <!-- Tiếng Việt -->
+                  </a>
+                  <a
+                    href="about_Us.html"
+                    class="nav-link lang-en"
+                    style="display: none"
+                  >
+                    <i class="fa-regular fa-user"></i> About Us
+                    <!-- Tiếng Anh (ẩn) -->
+                  </a>
+                </li>
+                <!-- Các mục khác -->
+                <!-- Thêm các mục khác tại đây -->
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="slider">
-            <div class="container">
-                <div class="slide-content">
-                    <!-- LEFT -->
-                    <div class="slide-content-left">
-                        <!-- slide left top -->
-                        <div class="owl-carousel">
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide2.jpg" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide3.jpg" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide4.png" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide5.jpg" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide6.png" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide7.png" />
-                                </a>
-                            </div>
-                            <div>
-                                <a href="product.html">
-                                    <img src="./img/index_slide/slide1.png" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="slide-content-left-top-button">
-                            <a class="prev customPrevBtn">&#10094;</a>
-                            <a class="next customNextBtn">&#10095;</a>
-                        </div>
-                    </div>
-                    <!-- RIGHT -->
-                    <div class="slide-content-right">
-                        <li>
-                            <a href=""></a><img src="./img/index_slide/itemR1.png"></li>
-                        <li>
-                            <a href=""></a><img src="./img/index_slide/itemR2.png"></li>
-                        <li>
-                            <a href=""></a><img src="./img/index_slide/itemR3.png"></li>
-                        <li>
-                            <a href=""></a><img src="./img/index_slide/itemR4.png"></li>
-                    </div>
+      <section class="slider">
+        <div class="container">
+          <div class="slide-content">
+            <!-- sản phẩm bên trái -->
+            <div class="slide-content-left">
+              <!-- slide bên trái -->
+              <div class="owl-carousel">
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide2.jpg" />
+                  </a>
                 </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide3.jpg" />
+                  </a>
+                </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide4.png" />
+                  </a>
+                </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide5.jpg" />
+                  </a>
+                </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide6.png" />
+                  </a>
+                </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide7.png" />
+                  </a>
+                </div>
+                <div>
+                  <a href="product.html">
+                    <img src="./img/index_slide/slide1.png" />
+                  </a>
+                </div>
+              </div>
+              <div class="slide-content-left-top-button">
+                <a class="prev customPrevBtn">&#10094;</a>
+                <a class="next customNextBtn">&#10095;</a>
+              </div>
             </div>
-            <script src="script.js">
-            </script>
-        </section>
-        <div class="container-all-prod">
-            <section class="banner-product">
-                <div class="container">
-                    <img src="./img/banner/chuyn-mc-galaxy-z-fold5-ezgif-com-optimize-ok.gif" alt="">
-                </div>
-            </section>
-            <section class="product">
-                <div class="container">
-                    <div class="product-list">
-                        <h1>Galaxy AI Z Fold5 | Z Flip5</h1>
-                    </div>
-                    <div class="col-content lts-product">
-                        <!-- item1 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng">
-                                    <img src="./img/product/sumSung/z-fold5-3.png" alt="Error" title="Samsung Galaxy Z Fold5 128/512GB - Chính Hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 128/512GB - Chính Hãng" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng">
-                  Samsung Galaxy Z Fold5 12/512GB - Chính Hãng
-                  </a>
-                                <span class="price">
-                    <strong>33,190,000 VND</strong>
-                    <strike>44,990,000 VND</strike>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">31,190,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-                                <label for="">Tặng gói Samsung care+ 6 tháng
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item2 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy Z Flip5 8/512GB - Chính Hãng">
-                                    <img src="./img/product/sumSung/z-flip5-kem.png" alt="Error" title="Samsung Galaxy Z Flip5 8/512GB - Chính Hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy Z Flip5 8/512GB - Chính Hãng" title="Samsung Galaxy Z Flip5 8/512GB - Chính Hãng">
-                  Samsung Galaxy Z Flip5 8/512GB - Chính Hãng
-                  </a>
-                                <span class="price">
-                    <strong>19,190,000 VND</strong>
-                    <strike>29,990,000 VND</strike>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">17,190,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-                                <label title="Tặng gói Samsung care+ 6 tháng">Tặng gói Samsung care+ 6 tháng
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 3 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng">
-                                    <img src="./img/product/sumSung/z-fold5-1.png" alt="Error" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng" title="Samsung Galaxy Z Fold5 12/512GB - Chính Hãng">
-                  Samsung Galaxy Z Fold5 12/512GB - Chính Hãng (BHĐT)
-                  </a>
-                                <span class="price">
-                    <strong>27,990,000 VND</strong>
-                    <strike>27,990,000 VND</strike>
-                  </span>
-                            </div>
-                            <div class="note">
-
-                                <label title="Tặng gói Samsung care+ 12 tháng">Tặng gói Samsung care+ 12 tháng
-                  </label>
-                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 4 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 12/256GB - Chính Hãng">
-                                    <img src="./img/product/sumSung/z-fold5-4.png" alt="Error" title="Samsung Galaxy Z Fold5 12/256GB - Chính Hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 12/256GB - Chính Hãng" title="Samsung Galaxy Z Fold5 12/256GB - Chính Hãng">
-                  Samsung Galaxy Z Fold5 12/256GB - Chính Hãng
-                  </a>
-                                <span class="price">
-                    <strong>30,990,000 VND</strong>
-                    <strike>40,990,000 VND</strike>
-                  </span>
-                            </div>
-                            <div class="note">
-
-                                <label title="Tặng gói Samsung care+ 6 tháng">Tặng gói Samsung care+ 6 tháng
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 5 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy Z Fold5 8/256GB - Chính Hãng">
-                                    <img src="./img/product/sumSung/z-flip5-tim.png" alt="Error" title="Samsung Galaxy Z Flip5 8/256GB - Chính Hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy Z Flip5 8/256GB - Chính Hãng" title="Samsung Galaxy Z Flip5 8/256GB - Chính Hãng">
-                  Samsung Galaxy Z Flip5 8/256GB - Chính Hãng
-                  </a>
-                                <span class="price">
-                    <strong>17,190,000 VND</strong>
-                    <strike>25,990,000 VND</strike>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">15,190,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Tặng gói Samsung care+ 6 tháng">Tặng gói Samsung care+ 6 tháng</label>
-                                <strong class="text-orange">VÀ 11 KM KHÁC</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- APPLE -->
-            <section class="banner-product2">
-                <div class="container">
-                    <img src="./img/banner/Apple-iPhone-15-promo-banner-buy-now-1920x552.jpg" alt="">
-                </div>
-            </section>
-            <section class="product">
-                <div class="container">
-                    <div class="product-list">
-                        <h1>iPhone 15 Series Available Now</h1>
-                    </div>
-                    <div class="col-content lts-product">
-                        <!-- item1 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Pro (512GB) - Chính Hãng VN/A">
-                                    <img src="./img/product/Iphone/iphone-15-pro-finish-select.png" alt="Error" title="iPhone 15 Pro (512GB) - Chính Hãng VN/A" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="iPhone 15 Pro (512GB) - Chính Hãng VN/A" title="iPhone 15 Pro (512GB) - Chính Hãng VN/A">
-                  iPhone 15 Pro (512GB) - Chính Hãng VN/A
-                  </a>
-                                <span class="price">
-                    <strong>33,990,000 VND</strong>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">31,990,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label for="">Giảm thêm 100.000VND khi thanh toán qua VNPAY</label>
-                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item2 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 (512GB) - Chính Hãng VN/A">
-                                    <img src="./img/product/Iphone/iphone-15-pink.png" alt="Error" title="iPhone 15 (512GB) - Chính Hãng VN/A" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="iPhone 15 (512GB) - Chính Hãng VN/A" title="iPhone 15 (512GB) - Chính Hãng VN/A">
-                  iPhone 15 (512GB) - Chính Hãng VN/A
-                  </a>
-                                <span class="price">
-                    <strong>28,390,000 VND</strong>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">26,390,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 100.000VND khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 3 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Plus (512GB) - Chính Hãng VN/A">
-                                    <img src="./img/product/Iphone/iphone-15-plus-blue.png" alt="Error" title="iPhone 15 Plus (512GB) - Chính Hãng VN/A" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="iPhone 15 Plus (512GB) - Chính Hãng VN/A" title="iPhone 15 Plus (512GB) - Chính Hãng VN/A">
-                  iPhone 15 Plus (512GB) - Chính Hãng VN/A
-                  </a>
-                                <span class="price">
-                    <strong>31,590,000 VND</strong>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">29,590,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 100.000VND khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 4 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Pro Max (512GB) Chính Hãng VN/A">
-                                    <img src="./img/product/Iphone/iphone-15-pro-max-natural-titanium.png" alt="Error" title="iPhone 15 Pro Max (512GB) Chính Hãng VN/A" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="iPhone 15 Pro Max (512GB) Chính Hãng VN/A" title="iPhone 15 Pro Max (512GB) Chính Hãng VN/A">
-                  iPhone 15 Pro Max (512GB) Chính Hãng VN/A
-                  </a>
-                                <span class="price">
-                    <strong>36,990,000 VND</strong>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">29,590,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 100.000VND khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 5 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Pro Max (1TB) Chính Hãng VN/A">
-                                    <img src="./img/product/Iphone/iphone-15-pro-max-1T.jpg" alt="Error" title="iPhone 15 Pro Max (1TB) Chính Hãng VN/A" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="iPhone 15 Pro Max (1TB) Chính Hãng VN/A" title="iPhone 15 Pro Max (1TB) Chính Hãng VN/A">
-                  iPhone 15 Pro Max (1TB) Chính Hãng VN/A
-                  </a>
-                                <span class="price">
-                    <strong>42,990,000 VND</strong>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">40,990,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 100.000VND khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- OTHER DEVICE -->
-            <section class="banner-product2">
-                <div class="container">
-                    <img src="./img/banner/Frame-2-1200x120-1.png" alt="">
-                </div>
-            </section>
-            <section class="product">
-                <div class="container">
-                    <div class="product-list">
-                        <h1>DEAL HOT Trong Tuần</h1>
-                    </div>
-                    <div class="col-content lts-product">
-                        <!-- item1 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="TECNO CAMON 20 (8+8GB/256GB) - Chính hãng">
-                                    <img src="./img/product/other/tecno-camon-20-pro.png" alt="Error" title="TECNO CAMON 20 (8+8GB/256GB) - Chính hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="TECNO CAMON 20 (8+8GB/256GB) - Chính hãng" title="TECNO CAMON 20 (8+8GB/256GB) - Chính hãng">
-                  TECNO CAMON 20 (8+8GB/256GB) - Chính hãng
-                  </a>
-                                <span class="price">
-                    <strong>3,690,000₫</strong>
-                    <strike>4,990,000₫</strike>
-                  </span>
-                                <!-- <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">31,990,000 VND</strong>
-                    </label>
-                  </div> -->
-                            </div>
-                            <div class="note">
-
-                                <label for="">Giảm thêm 5% khi thanh toán qua VNPAY</label>
-                                <strong class="text-orange">VÀ 11 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item2 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Samsung Galaxy A55 - 8GB/128GB - Chính hãng">
-                                    <img src="./img/product/other/a55-tim-lilac-5.png" alt="Error" title="Samsung Galaxy A55 - 8GB/128GB - Chính hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Samsung Galaxy A55 - 8GB/128GB - Chính hãng" title="Samsung Galaxy A55 - 8GB/128GB - Chính hãng">
-                  Samsung Galaxy A55 - 8GB/128GB - Chính hãng
-                  </a>
-                                <span class="price">
-                    <strong>8,890,000 VND</strong>
-                    <strike>9,690,000</strike>
-                  </span>
-                                <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">8,390,000 VND</strong>
-                    </label>
-                                </div>
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 5% khi thanh toán qua VNPAY">Giảm thêm 5% khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 5 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 3 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="Infinix HOT 40 PRO (8+8GB/256GB) - Chính hãng">
-                                    <img src="./img/product/other/infinix-hot-40i.png" alt="Error" title="Infinix HOT 40 PRO (8+8GB/256GB) - Chính hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="Infinix HOT 40 PRO (8+8GB/256GB) - Chính hãng" title="Infinix HOT 40 PRO (8+8GB/256GB) - Chính hãng">
-                  Infinix HOT 40 PRO (8+8GB/256GB) - Chính hãng
-                  </a>
-                                <span class="price">
-                    <strong>4,090,000 VND</strong>
-                  </span>
-                                <!-- <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">29,590,000 VND</strong>
-                    </label>
-                  </div> -->
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Phiếu mua hàng 200.000VND
-                  </label>
-                                <strong class="text-orange">VÀ 12 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 4 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Pro Max (512GB) Chính Hãng VN/A">
-                                    <img src="./img/product/other/poco-x6-5g-black-1.png" alt="Error" title="POCO X6 5G (8GB/256GB) - Chính hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="POCO X6 5G (8GB/256GB) - Chính hãng" title="POCO X6 5G (8GB/256GB) - Chính hãng">
-                  POCO X6 5G (8GB/256GB) - Chính hãng
-                  </a>
-                                <span class="price">
-                    <strong>6,990,000 VND</strong>
-                    <strike>8,490,000 VND</strike>
-                  </span>
-                                <!-- <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">29,590,000 VND</strong>
-                    </label>
-                  </div> -->
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 5% khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 10 KM KHÁC</strong>
-                            </div>
-                        </div>
-                        <!-- item 5 -->
-                        <div class="product-item">
-                            <div class="item-img">
-                                <a href="product.html" title="iPhone 15 Pro Max (1TB) Chính Hãng VN/A">
-                                    <img src="./img/product/other/x7b.png" alt="Error" title="HONOR X7b - 8GB/256GB - Chính hãng" />
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <a href="product.html" title="HONOR X7b - 8GB/256GB - Chính hãng" title="HONOR X7b - 8GB/256GB - Chính hãng">
-                  HONOR X7b - 8GB/256GB - Chính hãng
-                  </a>
-                                <span class="price">
-                    <strong>4,990,000 VND</strong>
-                    <strike>5,290,000 VND</strike>
-                  </span>
-                                <!-- <div style="padding-top: 8px; font-style: italic; text-align: left;">
-                    <label for="">
-                      Giá lên đời từ: 
-                      <strong class="text-red">40,990,000 VND</strong>
-                    </label>
-                  </div> -->
-                            </div>
-                            <div class="note">
-
-                                <label title="Giảm thêm 100.000VND khi thanh toán qua VNPAY">Giảm thêm 5% khi thanh toán qua VNPAY
-                  </label>
-                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- 4 ô sản phẩm mới bên phải -->
+            <div class="slide-content-right">
+              <li><a href=""></a><img src="./img/index_slide/itemR1.png" /></li>
+              <li><a href=""></a><img src="./img/index_slide/itemR2.png" /></li>
+              <li><a href=""></a><img src="./img/index_slide/itemR3.png" /></li>
+              <li><a href=""></a><img src="./img/index_slide/itemR4.png" /></li>
+            </div>
+          </div>
         </div>
+        <script src="script.js"></script>
+      </section>
+
+      <!-- Danh mục sản phẩm     -->
+      <div class="product">
+        <div class="banner-product">
+          <a href="product.html">
+            <img
+              src="./img/banner/chuyn-mc-galaxy-z-fold5-ezgif-com-optimize-ok.gif"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="samSung_Phone">
+          <h1 class="banner-title">Samsung Galaxy AI</h1>
+          <div class="carts">
+            <!-- 1. Hàng đầu tiên  -->
+            <!-- Bắt đầu cart Z Fold5 -->
+            <div class="cart">
+              <a href="product.html">
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-a04.jpg"
+                />
+                <!-- Tên điện thoại  -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy Z Fold5</h3>
+                </div>
+                <!-- Thẻ chữ và icon  -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Thẻ số tiền cũ của điện thoại  -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    40.990.000<u>đ</u>
+                  </p>
+                  <span>-26%</span>
+                </div>
+                <!-- Giá mới của điện thoại  -->
+                <div class="cart-price">
+                  <strong>29.990.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của người mua hàng  -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">100</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart Z Fold5 -->
+
+            <!-- Bắt đầu cart A15 5G -->
+            <div class="cart">
+              <a href="product.html">
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-a15-5g-xanh.jpg"
+                />
+                <!-- Phần tên của sản phẩm  -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy A15 5G</h3>
+                </div>
+                <!-- Dòng text hiển thị  -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Tiếng việt và tiếng Anh (ẩn)  -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của điện thoại  -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    6.290.000<u>đ</u>
+                  </p>
+                  <span>-12%</span>
+                </div>
+                <!-- Giá mới được cập nhật  -->
+                <div class="cart-price">
+                  <strong>5.490.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng  -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">62</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart A15 5G -->
+
+            <!-- Bắt đầu cart A25 5G -->
+            <div class="cart">
+              <a href="product.html">
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-a25-den.jpg"
+                />
+                <!-- Tên của sản phẩm  -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy A25 5G</h3>
+                </div>
+                <!-- Text online  -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm  -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    6.590.000<u>đ</u>
+                  </p>
+                  <span>-6%</span>
+                </div>
+                <!-- Giá mới cập nhật  -->
+                <div class="cart-price">
+                  <strong>6.190.000<u>đ</u></strong>
+                </div>
+                <!-- Người dùng đánh giá  -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">8</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart A25 5G -->
+
+            <!-- Bắt đầu cart S24 Ultra 5G-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-s24-ultra-grey.jpg"
+                />
+                <!-- Nội dung sản phẩm -->
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">Samsung Galaxy S24 Ultra 5G</h3>
+                </div>
+                <!-- Trạng thái online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Trạng thái online (vi) -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <!-- Trạng thái online (en) -->
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <!-- Giá cũ (vi) -->
+                  <p style="text-decoration-line: line-through">
+                    37.490.000<u>đ</u>
+                  </p>
+                  <!-- Phần trừ giảm giá (%) -->
+                  <span>-15%</span>
+                </div>
+                <!-- Giá mới của sản phẩm -->
+                <div class="cart-price">
+                  <!-- Giá mới (vi) -->
+                  <strong>31.790.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <!-- Biểu tượng đánh giá -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">9</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart S24 Ultra 5G-->
+
+            <!-- 2. Hàng thứ 2  -->
+
+            <!-- Bắt đầu cart A34 5G 512GB-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-a34.jpg"
+                />
+                <!-- Nội dung của sản phẩm -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy A34 5G 512GB</h3>
+                </div>
+                <!-- Thông tin về tình trạng online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Ngôn ngữ tiếng Việt -->
+                  <p class="lang-vi">Thông tin online</p>
+                  <!-- Ngôn ngữ tiếng Anh -->
+                  <p class="lang-en" style="display: none">Online status</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    9.490.000<u>đ</u>
+                  </p>
+                  <span>-12%</span>
+                </div>
+                <!-- Giá mới cập nhật -->
+                <div class="cart-price">
+                  <strong>8.290.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">134</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart A34 5G 512GB-->
+
+            <!-- Bắt đầu cart M34 5G 128GB-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-m34-xanh-ngoc.jpg"
+                />
+                <!-- Nội dung của sản phẩm -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy M34 5G 128GB</h3>
+                </div>
+                <!-- Thông tin về tình trạng online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Ngôn ngữ tiếng Việt -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <!-- Ngôn ngữ tiếng Anh -->
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    7.990.000<u>đ</u>
+                  </p>
+                  <span>-21%</span>
+                </div>
+                <!-- Giá mới cập nhật -->
+                <div class="cart-price">
+                  <strong>6.290.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">301</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart M34 5G 128GB-->
+
+            <!-- Bắt đầu cart M54 5G 256GB-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-m54-bac.jpg"
+                />
+                <!-- Nội dung của sản phẩm -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy M54 5G 256GB</h3>
+                </div>
+                <!-- Thông tin về tình trạng online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Ngôn ngữ tiếng Việt -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <!-- Ngôn ngữ tiếng Anh -->
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    8.990.000<u>đ</u>
+                  </p>
+                  <span>-5%</span>
+                </div>
+                <!-- Giá mới cập nhật -->
+                <div class="cart-price">
+                  <strong>8.490.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">31</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart M54 5G 256GB-->
+
+            <!-- Bắt đầu cart S23 Ultra 5G-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/sumSung/samsung-galaxy-s23-ultra.jpg"
+                />
+                <!-- Nội dung của sản phẩm -->
+                <div class="cart-content">
+                  <h3 class="cart-title">Samsung Galaxy S23 Ultra 5G</h3>
+                </div>
+                <!-- Thông tin về tình trạng online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Ngôn ngữ tiếng Việt -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <!-- Ngôn ngữ tiếng Anh -->
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    24.990.000<u>đ</u>
+                  </p>
+                  <span>-15%</span>
+                </div>
+                <!-- Giá mới cập nhật -->
+                <div class="cart-price">
+                  <strong>21.090.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">10</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart S23 Ultra 5G-->
+          </div>
+        </div>
+        <!-- Kết thúc SamSung  -->
+
+        <!-- Điện thoại IPhone -->
+        <div class="iPhone_Phone">
+          <!-- Banner hãng Apple khi nhấn vào sẽ qua trang product để mua hàng -->
+          <div class="banner-product2">
+            <a href="product.html">
+              <img
+                src="./img/banner/Apple-iPhone-15-promo-banner-buy-now-1920x552.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h1 class="banner-title">IPhone</h1>
+          <div class="carts">
+            <!-- 1. Hàng đầu tiên  -->
+            <!-- Bắt đầu cart IPhone 15-->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-15-pink.png"
+                />
+                <!-- Nội dung của sản phẩm -->
+                <div class="cart-content">
+                  <h3 class="cart-title">IPhone 15</h3>
+                </div>
+                <!-- Thông tin về tình trạng online của sản phẩm -->
+                <div class="cart-txt-online">
+                  <i class="fas fa-signal"></i>
+                  <!-- Ngôn ngữ tiếng Việt -->
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <!-- Ngôn ngữ tiếng Anh -->
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <!-- Giá cũ của sản phẩm -->
+                <div class="cart-price-old">
+                  <p style="text-decoration-line: line-through">
+                    22.990.000<u>đ</u>
+                  </p>
+                  <span>-15%</span>
+                </div>
+                <!-- Giá mới cập nhật -->
+                <div class="cart-price">
+                  <strong>19.490.000<u>đ</u></strong>
+                </div>
+                <!-- Đánh giá của khách hàng -->
+                <div class="cart-rating">
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <!-- Tổng số đánh giá -->
+                  <p class="cart-rating-total">34</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 15-->
+
+            <!-- Bắt đầu cart IPhone 15 Plus -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-15-plus-blue.png"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 15 Plus</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    25.990.000<u>đ</u>
+                  </p>
+                  <span>-11%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>22.990.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">31</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 15 Plus -->
+
+            <!-- Bắt đầu cart IPhone 15 Pro  -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-15-pro-finish-select.png"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 15 Pro</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    28.990.000<u>đ</u>
+                  </p>
+                  <span>-12%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>25.490.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">21</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 15 Pro  -->
+
+            <!-- Bắt đầu cart IPhone 15 Pro Max -->
+            <div class="cart">
+              <a href="product.html">
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-15-pro-max-natural-titanium.png"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 15 Pro Max</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    34.990.000<u>đ</u>
+                  </p>
+                  <span>-15%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>29.490.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">107</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 15 Pro Max -->
+
+            <!-- 2. Hàng thứ 2  -->
+            <!-- Bắt đầu cart IPhone 11  -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-11.jpg"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 11</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    11.790.000<u>đ</u>
+                  </p>
+                  <span>-23%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>8.990.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">848</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 11 -->
+
+            <!-- Bắt đầu cart IPhone 13  -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-13.jpg"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 13</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    17.790.000<u>đ</u>
+                  </p>
+                  <span>-21%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>13.990.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">499</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 13 -->
+
+            <!-- Bắt đầu cart IPhone 14  -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-14.jpeg"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 14</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    23.990.000<u>đ</u>
+                  </p>
+                  <span>-16%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>20.090.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">444</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 14  -->
+
+            <!-- Bắt đầu cart IPhone 12  -->
+            <div class="cart">
+              <a href="product.html">
+                <!-- Hình ảnh sản phẩm -->
+                <img
+                  class="cart-image"
+                  src="./img/product/Iphone/iphone-12.jpg"
+                />
+                <div class="cart-content">
+                  <!-- Tiêu đề sản phẩm -->
+                  <h3 class="cart-title">IPhone 12</h3>
+                </div>
+                <div class="cart-txt-online">
+                  <!-- Thông tin về tình trạng online của sản phẩm -->
+                  <i class="fas fa-signal"></i>
+                  <p class="lang-vi">Online giá rẻ quá</p>
+                  <p class="lang-en" style="display: none">On Sale</p>
+                </div>
+                <div class="cart-price-old">
+                  <!-- Giá cũ của sản phẩm -->
+                  <p style="text-decoration-line: line-through">
+                    17.990.000<u>đ</u>
+                  </p>
+                  <span>-16%</span>
+                </div>
+                <div class="cart-price">
+                  <!-- Giá mới của sản phẩm -->
+                  <strong>14.990.000<u>đ</u></strong>
+                </div>
+                <div class="cart-rating">
+                  <!-- Đánh giá của sản phẩm -->
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="cart-rating-total">35</p>
+                </div>
+              </a>
+            </div>
+            <!-- Kết thúc cart IPhone 12  -->
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-        <!-- Phần cuối cùng của footer -->
-        <div class="footer_end">
-            <!-- Liên kết đến trang Chính Sách và Điều Khoản -->
-            <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
-            <!-- Liên kết đến trang Terms and Conditions (ẩn) -->
-            <a class="lang-en" style="display: none;" href="./policy.html">Terms and Conditions</a>
-            <!-- Các biểu tượng mạng xã hội -->
-            <a href="https://www.facebook.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-meta"></i>
-            </a>
-            <a href="https://www.twitter.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://github.com/" class="social-icon" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <!-- Thông điệp bản quyền -->
-        <p class="lang-vi">Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i></p>
-        <!-- Thông điệp bản quyền (ẩn) -->
-        <p class="lang-en" style="display: none;">Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i></p>
-        <!-- Nút "Quay về đầu trang" -->
-        <a href="#search" class="gotop">
-            <i class="fa-solid fa-chevron-up"></i>
+      <!-- Phần cuối cùng của footer -->
+      <div class="footer_end">
+        <!-- Liên kết đến trang Chính Sách và Điều Khoản -->
+        <a class="lang-vi" href="./policy.html">Chính Sách và Điều Khoản</a>
+        <!-- Liên kết đến trang Terms and Conditions (ẩn) -->
+        <a class="lang-en" style="display: none" href="./policy.html"
+          >Terms and Conditions</a
+        >
+        <!-- Các biểu tượng mạng xã hội -->
+        <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+          <i class="fa-brands fa-meta"></i>
         </a>
+        <a href="https://www.twitter.com/" class="social-icon" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://github.com/" class="social-icon" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <!-- Thông điệp bản quyền -->
+      <p class="lang-vi">
+        Bản quyền trang web thuộc về <i>&copy;Trung Dong Mobile</i>
+      </p>
+      <!-- Thông điệp bản quyền (ẩn) -->
+      <p class="lang-en" style="display: none">
+        Copyright of this website belongs to <i>&copy;Trung Dong Mobile</i>
+      </p>
+      <!-- Nút "Quay về đầu trang" -->
+      <a href="#search" class="gotop">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
     </footer>
     <script src="script.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
 <!--   Bản quyền hình ảnh thuộc về thegiodidong.com hoanghamobile.com
   Trang web chỉ phục vụ mục đích học tập ngoài ra không sử dụng cho mục đích thương mại nào khác-->
