@@ -14,11 +14,11 @@
 /* For medium screens */
 
 @media (max-width: 768px) {
-  .header,
-  .slider {
+    
+  .header{
     flex-direction: column;
   }
-  .slide-content-right {
+  .slider{
     display: none;
   }
 }
@@ -26,11 +26,10 @@
 /* For small screens */
 
 @media (max-width: 480px) {
-  .header,
-  .slider {
+  .header{
     flex-direction: column;
   }
-  .slide-content-right {
+  .slider{
     display: none;
   }
 }
