@@ -152,23 +152,14 @@ main {
 
 
 /* Slider */
-
 li {
     list-style: none;
 }
-
-.slider {
-    padding: 0;
-}
-
 .slide-content {
     display: flex;
     justify-content: space-between;
 }
-
-
 /* LEFT */
-
 .slide-content-left {
     width: 75%;
     padding: 0 1%;
@@ -186,43 +177,28 @@ li {
     object-fit: cover;
 }
 
-.slide-content-left-bottom {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid red;
-    height: 15%;
-}
-
-.slide-content-left-bottom li {
-    font-size: 80%;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    border-left: 2px solid red;
-}
-
-.slide-content-left-bottom li:nth-child(1) {
-    border-left: none;
-}
-
-.slide-content-left-bottom li::before {
-    display: block;
-    content: "";
+/* button slide */
+.customPrevBtn, .customNextBtn {
     position: absolute;
-    width: 1px;
-    height: 70%;
-    right: 0;
-}
-
-.slide-content-left-bottom li.active {
-    background-color: red;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-weight: bolder;
+    padding: 2px 2px;
+    cursor: pointer;
+    z-index: 999;
 }
 
+.customPrevBtn {
+    left: 10px;
+}
 
+.customNextBtn {
+    right: 10px;
+}
+.next:hover, .prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 /* RIGHT */
 
 .slide-content-right {
@@ -242,64 +218,6 @@ li {
     height: 90%;
     width: 90%;
 }
-
-.mySlides {
-    display: none;
-}
-
-
-/* Button slide */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Fading animation */
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 4;
-    }
-}
-
-
 /* End Slider */
 
 
