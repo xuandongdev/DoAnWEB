@@ -10,7 +10,7 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="cart.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -1001,6 +1001,45 @@
                     iphoneProducts.style.display = "block";
                 });
             });
+
+            var itemList = {
+                "ip01": { "name": "IPhone 15", "price": 19490000, "photo": "./img/product/Iphone/iphone-15-pink.png" },
+                "ip02": { "name": "IPhone 15 Plus", "price": 2299000, "photo": "./img/product/Iphone/iphone-15-plus-blue.png" },
+                "ip03": { "name": "IPhone Pro", "price": 2549000, "photo": "./img/product/Iphone/iphone-15-pro-finish-select.png" },
+                "ip04": { "name": "IPhone Pro Max", "price": 29490000, "photo": "./img/product/button-dat-hang.gif" },
+                "ip05": { "name": "IPhone 11", "price": 899000, "photo": "./img/product/button-dat-hang.gif" },
+                "ip06": { "name": "IPhone 13", "price": 13990000, "photo": "./img/product/button-dat-hang.gif" },
+                "ip07": { "name": "IPhone 14", "price": 20090000, "photo": "./img/product/Iphone/iphone-13.jpg" },
+                "ip08": { "name": "IPhone 12", "price": 14990000, "photo": "./img/product/Iphone/iphone-14.jpeg" },
+
+                "ss01": { "name": "Samsung Galaxy Z Fold 5", "price": 29990000, "photo": "./img/product/sumSung/samsung-galaxy-a04.jpg" },
+                "ss02": { "name": "Samsung Galaxy A15 5G", "price": 5490000, "photo": "./img/product/sumSung/samsung-galaxy-a15-5g-xanh.jpg" },
+                "ss03": { "name": "Samsung Galaxy A25 5G", "price": 6190000, "photo": "./img/product/sumSung/samsung-galaxy-a25-den.jpg" },
+                "ss04": { "name": "Samsung Galaxy S24 Ultra 5G", "price": 31790000, "photo": "./img/product/sumSung/samsung-galaxy-s24-ultra-grey.jpg" },
+                "ss05": { "name": "Samsung Galaxy A34 5G 512GB", "price": 8290000, "photo": "./img/product/sumSung/samsung-galaxy-a34.jpg" },
+                "ss06": { "name": "Samsung Galaxy M34 5G 128GB", "price": 6290000, "photo": "./img/product/sumSung/samsung-galaxy-m34-xanh-ngoc.jpg" },
+                "ss07": { "name": "Samsung Galaxy M54 5G 256GB", "price": 8490000, "photo": "./img/product/sumSung/samsung-galaxy-m54-bac.jpg" },
+                "ss08": { "name": "Samsung Galaxy S23 Ultra 5G", "price": 21090000, "photo": "./img/product/sumSung/samsung-galaxy-s23-ultra.jpg" },
+            }
+
+            function addCart(code) {
+                var number = parseInt(document.getElementById(code).value);
+                var name = itemList[code].name;
+                if (number == 0)
+                    return;
+                if (typeof localStorage[code] === "undefined") {
+                    window.localStorage.setItem(code, number);
+                } else {
+                    var current = parseInt(window.localStorage.getItem(code));
+                    if (current + number > 99) {
+                        window.localStorage.setItem(code, 99);
+                        alert("Mỗi mặt hàng chỉ có thể đặt 100 sản phẩm cho mỗi đơn hàng.");
+                        return;
+                    } else
+                        window.localStorage.setItem(code, current + number);
+                }
+                alert("Đã thêm" + number + " sản phẩm " + name + " vào giỏ hàng. Số lượng sản phẩm " + name + " đã đặt là " + parseInt(window.localStorage.getItem(code)) + ".");
+            }
         </script>
     </div>
 
